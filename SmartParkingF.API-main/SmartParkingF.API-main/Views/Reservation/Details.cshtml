@@ -1,0 +1,86 @@
+@model SmartParkingF.API.Models.Reservation
+
+@{
+    ViewData["Title"] = "Reservation Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="row">
+        @* عرض اسم الفيلا *@
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Property)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Property.Name)
+        </dd>
+
+        @* عرض رقم الركنة (مثلاً A1) بدل الـ ID *@
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.ParkingSpot)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.ParkingSpot.SpotNumber)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.UserEmail)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CarPlateNumber)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CarPlateNumber)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.EndTime)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.EndTime)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.QrCodeData)
+        </dt>
+        <dd class="col-sm-9">
+            <span class="badge bg-info text-dark">@Html.DisplayFor(model => model.QrCodeData)</span>
+        </dd>
+
+        @* ✅ التعديل الجوهري: TotalPrice بدل Amount لحل الـ Build Error *@
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </dt>
+        <dd class="col-sm-9">
+            <strong>@Html.DisplayFor(model => model.TotalPrice) ج.م</strong>
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class="col-sm-9">
+            <span class="badge @(Model.Status == "Confirmed" ? "bg-success" : "bg-warning")">
+                @Html.DisplayFor(model => model.Status)
+            </span>
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a> |
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
