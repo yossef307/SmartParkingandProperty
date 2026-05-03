@@ -18,7 +18,7 @@
             @Html.DisplayFor(model => model.Property.Name)
         </dd>
 
-        @* عرض رقم الركنة (مثلاً A1) بدل الـ ID *@
+        @* عرض رقم الركنة *@
         <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.ParkingSpot)
         </dt>
@@ -27,10 +27,12 @@
         </dd>
 
         <dt class="col-sm-3">
-            @Html.DisplayNameFor(model => model.UserEmail)
+            @* ✅ التعديل هنا: نص ثابت لأن الحقل محذوف من الموديل *@
+            User Email
         </dt>
         <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.UserEmail)
+            @* ✅ التعديل هنا: الوصول للإيميل عبر كائن المستخدم *@
+            @Html.DisplayFor(model => model.User.Email)
         </dd>
 
         <dt class="col-sm-3">
@@ -61,7 +63,6 @@
             <span class="badge bg-info text-dark">@Html.DisplayFor(model => model.QrCodeData)</span>
         </dd>
 
-        @* ✅ التعديل الجوهري: TotalPrice بدل Amount لحل الـ Build Error *@
         <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.TotalPrice)
         </dt>
@@ -79,7 +80,6 @@
         </dd>
     </dl>
 </div>
-
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a> |
     <a asp-action="Index" class="btn btn-secondary">Back to List</a>

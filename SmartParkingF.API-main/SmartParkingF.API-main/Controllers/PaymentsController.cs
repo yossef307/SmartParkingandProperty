@@ -24,22 +24,21 @@ namespace SmartParkingF.API.Controllers
             if (user == null) return NotFound("المستخدم غير موجود");
 
             // 2. جلب تاريخ المدفوعات بناءً على الحجوزات
-            // استخدمنا Include لجلب بيانات الركنة والفيلا مع الحجز
             var history = await _context.Reservations
                 .Include(r => r.ParkingSpot)
                 .Include(r => r.Property)
-                .Where(r => r.UserEmail == user.Email)
+                // ✅ التعديل هنا: الفلترة باستخدام UserId بدلاً من UserEmail لضمان الدقة والأداء
+                .Where(r => r.UserId == user.Id)
                 .OrderByDescending(r => r.StartTime)
                 .Select(r => new {
                     TransactionId = "TXN-" + r.Id.ToString().PadLeft(6, '0'),
                     Date = r.StartTime.ToString("MMM dd, yyyy"),
-                    Method = "Visa .... 4242", // قيمة ثابتة للعرض حالياً
+                    Method = "Visa .... 4242",
                     Status = r.Status,
 
-                    // ✅ التعديل الجوهري: استخدام TotalPrice بدل Amount
+                    // استخدام TotalPrice كما في الموديل الجديد
                     Amount = r.TotalPrice,
 
-                    // عرض اسم الفيلا ورقم الركنة معاً بشكل منسق
                     Description = (r.Property != null ? r.Property.Name : "Smart Parking") +
                                   " - Spot: " + (r.ParkingSpot != null ? r.ParkingSpot.SpotNumber : "N/A")
                 })
