@@ -1,75 +1,91 @@
 import axios from 'axios';
 
-/** * الإعدادات الأساسية للـ API
- * تأكد أن البورت 7048 هو الذي يعمل عليه مشروع ASP.NET Core حالياً
+/**
+ * الإعدادات الأساسية للـ API
+ * تم ضبط الـ Base URL ليتوافق مع بورت الـ ASP.NET Core الخاص بك
  */
 const API_URL = 'https://localhost:7048/api';
+
+const apiClient = axios.create({
+    baseURL: API_URL,
+    headers: {
+        'Content-Type': 'application/json'
+    }
+});
 
 const parkingService = {
     /**
      * 1. جلب قائمة الركنات المتاحة
-     * المسار: GET /api/ParkingSpots
      */
     getParkingSpots: async () => {
         try {
-            const response = await axios.get(`${API_URL}/ParkingSpots`);
-            // التأكد من إرجاع البيانات حتى لو كانت مصفوفة فارغة
+            const response = await apiClient.get('/ParkingSpots');
             return response.data || [];
         } catch (error) {
-            console.error("خطأ أثناء جلب أماكن الركن:", error.message);
+            console.error("Error fetching spots:", error.message);
             throw error;
         }
     },
 
     /**
-     * 2. إنشاء حجز جديد (ربط المستخدم، العقار، والركنة)
-     * المسار: POST /api/Reservations
-     * يتوقع كائن مطابق لـ ReservationDto.cs
+     * 2. إنشاء حجز جديد (Parking + Property)
      */
     confirmReservation: async (reservationData) => {
         try {
-            // إرسال البيانات (PropertyId, ParkingSpotId, UserId, StartDate, EndDate, TotalPrice)
-            const response = await axios.post(`${API_URL}/Reservations`, reservationData);
+            const formattedData = {
+                ...reservationData,
+                startDate: new Date(reservationData.StartDate).toISOString(),
+                endDate: new Date(reservationData.EndDate).toISOString(),
+            };
 
-            // السيرفر يرجع كائن يحتوي على message و data
+            const response = await apiClient.post('/Reservations', formattedData);
             return response.data;
         } catch (error) {
-            // التقاط رسائل الخطأ المخصصة من السيرفر (مثل: المكان غير متاح)
-            const errorMessage = error.response?.data?.message
-                || "فشل الاتصال بالسيرفر، تأكد من وجود العقار والمستخدم برقم 1";
-
-            console.error("خطأ في عملية الحجز:", errorMessage);
-            throw new Error(errorMessage);
+            const msg = error.response?.data?.message || "فشل حجز المكان، قد يكون مشغولاً حالياً.";
+            throw new Error(msg);
         }
     },
 
     /**
-     * 3. إلغاء الحجز بناءً على معرف الركنة (خاص بمفتاح التبديل في React)
-     * المسار: DELETE /api/Reservations/CancelBySpot/{spotId}
+     * 3. إلغاء الحجز بناءً على معرف الركنة
      */
     cancelReservation: async (spotId) => {
         try {
-            // تصحيح الرابط الذي كان مقطوعاً في الكود السابق
-            const response = await axios.delete(`${API_URL}/Reservations/CancelBySpot/${spotId}`);
+            const response = await apiClient.delete(`/Reservations/CancelBySpot/${spotId}`);
             return response.data;
         } catch (error) {
-            const errorMessage = error.response?.data?.message || "فشل إلغاء الحجز";
-            console.error("خطأ في إلغاء الحجز:", errorMessage);
-            throw new Error(errorMessage);
+            throw new Error(error.response?.data?.message || "فشل إلغاء الحجز");
         }
     },
 
     /**
-     * 4. جلب تفاصيل حجز معين (اختياري - للعرض في لوحة التحكم)
-     * المسار: GET /api/Reservations/{id}
+     * 4. جلب تاريخ مدفوعات المستخدم (المعدل)
+     * يطابق الآن: [HttpGet("user-history/{userId}")] في الـ Controller
      */
-    getReservationById: async (id) => {
+    getUserPaymentHistory: async (userId = 1) => {
         try {
-            const response = await axios.get(`${API_URL}/Reservations/${id}`);
+            // نمرر الـ userId كجزء من الرابط كما هو محدد في الـ Backend
+            const response = await apiClient.get(`/Payments/user-history/${userId}`);
+            return response.data || [];
+        } catch (error) {
+            console.error("Error fetching payments history:", error.response?.data || error.message);
+            throw error;
+        }
+    },
+
+    /**
+     * 5. معالجة عملية دفع جديدة
+     * يطابق الآن: [HttpPost("Process")] في الـ Controller
+     */
+    processPayment: async (paymentPayload) => {
+        try {
+            // إرسال البيانات إلى الأكشن الجديد الذي أضفناه في الـ C#
+            const response = await apiClient.post('/Payments/Process', paymentPayload);
             return response.data;
         } catch (error) {
-            console.error("خطأ في جلب بيانات الحجز:", error);
-            throw error;
+            console.error("Payment processing error:", error.response?.data || error.message);
+            const msg = error.response?.data?.message || "حدث خطأ أثناء معالجة الدفع، يرجى المحاولة مرة أخرى.";
+            throw new Error(msg);
         }
     }
 };

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Building2, Car, ShieldCheck, ArrowRight, Star, MapPin } from 'lucide-react';
 
 const Home = () => {
-    // التحقق من حالة تسجيل الدخول من التخزين المحلي
+    // Check login status from local storage
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
     return (
@@ -24,22 +24,22 @@ const Home = () => {
                         Real<span className="text-blue-600">Park</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-                        نظام ذكي يجمع بين رفاهية السكن وسهولة ركن السيارات. استأجر وحدتك الآن واحجز موقفك بضغطة زر.
+                        A smart system combining luxury living with seamless parking. Rent your unit now and reserve your spot with a single click.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link to="/properties" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-blue-500/20 flex items-center justify-center gap-2">
-                            استكشف الوحدات <ArrowRight size={20} />
+                            Explore Units <ArrowRight size={20} />
                         </Link>
 
-                        {/* تغيير الزرار بناءً على حالة الدخول */}
+                        {/* Button changes based on login status */}
                         {!isLoggedIn ? (
                             <Link to="/login" className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all">
-                                تسجيل الدخول
+                                Login
                             </Link>
                         ) : (
                             <Link to="/parking" className="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-emerald-500/20 flex items-center justify-center gap-2">
-                                <Car size={20} /> حجز باركينج
+                                <Car size={20} /> Book Parking
                             </Link>
                         )}
                     </div>
@@ -52,18 +52,18 @@ const Home = () => {
                     <div className="grid md:grid-cols-3 gap-12">
                         <FeatureCard
                             icon={<Car size={40} className="text-blue-600" />}
-                            title="ركن ذكي"
-                            desc="نظام مؤتمت بالكامل يعتمد على الـ QR Code لإدارة مواقف السيارات."
+                            title="Smart Parking"
+                            desc="Fully automated system using QR Code technology for seamless parking management."
                         />
                         <FeatureCard
                             icon={<Building2 size={40} className="text-blue-600" />}
-                            title="وحدات فاخرة"
-                            desc="مجموعة مختارة من العقارات التي تلبي كافة احتياجاتك وتطلعاتك."
+                            title="Luxury Units"
+                            desc="A curated selection of premium properties designed to meet all your needs and aspirations."
                         />
                         <FeatureCard
                             icon={<ShieldCheck size={40} className="text-blue-600" />}
-                            title="أمان وموثوقية"
-                            desc="حماية كاملة لبياناتك وعمليات الدفع والحجز الخاصة بك."
+                            title="Safe & Secure"
+                            desc="Complete protection for your data, payments, and reservation processes."
                         />
                     </div>
                 </div>

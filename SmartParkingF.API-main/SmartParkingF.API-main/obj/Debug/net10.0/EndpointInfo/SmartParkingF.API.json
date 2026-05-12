@@ -214,11 +214,53 @@
         }
       }
     },
-    "/api/Payments/user-history": {
+    "/api/Payments/user-history/{userId}": {
       "get": {
         "tags": [
           "Payments"
         ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Payments/Process": {
+      "post": {
+        "tags": [
+          "Payments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentRequestDTO"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -324,6 +366,18 @@
         }
       }
     },
+    "/api/Reports/financial-summary": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Reservations": {
       "get": {
         "tags": [
@@ -336,25 +390,19 @@
               "text/plain": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Reservation"
-                  }
+                  "items": { }
                 }
               },
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Reservation"
-                  }
+                  "items": { }
                 }
               },
               "text/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Reservation"
-                  }
+                  "items": { }
                 }
               }
             }
@@ -386,24 +434,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Reservation"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Reservation"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Reservation"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -431,21 +462,10 @@
         }
       }
     },
-    "/api/Reservations/{id}": {
+    "/api/Settings": {
       "get": {
         "tags": [
-          "Reservations"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
+          "Settings"
         ],
         "responses": {
           "200": {
@@ -453,20 +473,51 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Reservation"
+                  "$ref": "#/components/schemas/SystemSettings"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Reservation"
+                  "$ref": "#/components/schemas/SystemSettings"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Reservation"
+                  "$ref": "#/components/schemas/SystemSettings"
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Settings/update": {
+      "post": {
+        "tags": [
+          "Settings"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SystemSettings"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SystemSettings"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SystemSettings"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -755,6 +806,36 @@
         },
         "additionalProperties": false
       },
+      "PaymentRequestDTO": {
+        "required": [
+          "method"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "method": {
+            "type": "string",
+            "nullable": true
+          },
+          "propertyId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "parkingSpotId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Property": {
         "required": [
           "name"
@@ -831,15 +912,6 @@
         "additionalProperties": false
       },
       "Reservation": {
-        "required": [
-          "endTime",
-          "parkingSpotId",
-          "propertyId",
-          "startTime",
-          "status",
-          "totalPrice",
-          "userId"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -850,26 +922,13 @@
             "type": "integer",
             "format": "int32"
           },
-          "parkingSpot": {
-            "$ref": "#/components/schemas/ParkingSpot"
-          },
           "propertyId": {
             "type": "integer",
             "format": "int32"
           },
-          "property": {
-            "$ref": "#/components/schemas/Property"
-          },
           "userId": {
             "type": "integer",
             "format": "int32"
-          },
-          "user": {
-            "$ref": "#/components/schemas/AppUser"
-          },
-          "carPlateNumber": {
-            "type": "string",
-            "nullable": true
           },
           "startTime": {
             "type": "string",
@@ -883,13 +942,17 @@
             "type": "number",
             "format": "double"
           },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
           "qrCodeData": {
             "type": "string",
             "nullable": true
           },
-          "status": {
-            "minLength": 1,
-            "type": "string"
+          "carPlateNumber": {
+            "type": "string",
+            "nullable": true
           },
           "bookingType": {
             "type": "string",
@@ -899,10 +962,14 @@
             "type": "string",
             "format": "date-time"
           },
-          "userEmail": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
+          "parkingSpot": {
+            "$ref": "#/components/schemas/ParkingSpot"
+          },
+          "property": {
+            "$ref": "#/components/schemas/Property"
+          },
+          "user": {
+            "$ref": "#/components/schemas/AppUser"
           }
         },
         "additionalProperties": false
@@ -936,6 +1003,44 @@
           }
         },
         "additionalProperties": false
+      },
+      "SystemSettings": {
+        "required": [
+          "projectName",
+          "supportEmail"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "projectName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "supportEmail": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "isMaintenanceMode": {
+            "type": "boolean"
+          },
+          "bookingPermissions": {
+            "type": "string",
+            "nullable": true
+          },
+          "apiSecurityKey": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastBackupDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
       }
     }
   },
@@ -953,7 +1058,13 @@
       "name": "Properties"
     },
     {
+      "name": "Reports"
+    },
+    {
       "name": "Reservations"
+    },
+    {
+      "name": "Settings"
     },
     {
       "name": "Users"

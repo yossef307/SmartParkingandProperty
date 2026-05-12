@@ -1,94 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\",
+  "WorkspaceRootPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430230133_AddCreatedAtToUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260430230133_AddCreatedAtToUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\models\\parkingspot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:models\\parkingspot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430225621_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260430225621_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430225330_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260430225330_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430221216_UpdateReservationsLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260430221216_UpdateReservationsLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\models\\reservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:models\\reservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|c:\\users\\dell\\onedrive\\desktop\\new folder (3) (3)\\new folder (3)\\smartparkingandproperty\\smartparkingf.api-main\\smartparkingf.api-main\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260512190401_AddSettingsTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260512190401_AddSettingsTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430010142_AddNinetyParkingSpots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260430010142_AddNinetyParkingSpots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|c:\\users\\dell\\onedrive\\desktop\\new folder (3) (3)\\new folder (3)\\smartparkingandproperty\\smartparkingf.api-main\\smartparkingf.api-main\\controllers\\systemsettingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:controllers\\systemsettingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|c:\\users\\dell\\onedrive\\desktop\\new folder (3) (3)\\new folder (3)\\smartparkingandproperty\\smartparkingf.api-main\\smartparkingf.api-main\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430004126_AddNinetyParkingSpots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260430004126_AddNinetyParkingSpots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430003140_InitialFinalSync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260430003140_InitialFinalSync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430002714_FinalSyncParkingSpotWithProperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260430002714_FinalSyncParkingSpotWithProperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\views\\reservation\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:views\\reservation\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\views\\reservation\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:views\\reservation\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\views\\reservation\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:views\\reservation\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|d:\\new folder (3)\\smartparkingf.api-main\\smartparkingf.api-main\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|c:\\users\\dell\\onedrive\\desktop\\new folder (3) (3)\\new folder (3)\\smartparkingandproperty\\smartparkingf.api-main\\smartparkingf.api-main\\models\\systemsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D8C074E-A179-7B3C-9229-FD6082AFC6B7}|SmartParkingF.API.csproj|solutionrelative:models\\systemsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,284 +30,92 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20260430230133_AddCreatedAtToUser.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430230133_AddCreatedAtToUser.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260430230133_AddCreatedAtToUser.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430230133_AddCreatedAtToUser.cs",
-              "RelativeToolTip": "Migrations\\20260430230133_AddCreatedAtToUser.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T23:01:33.44Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20260430225621_InitialCreate.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430225621_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260430225621_InitialCreate.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430225621_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\20260430225621_InitialCreate.cs",
+              "DocumentIndex": 1,
+              "Title": "20260512190401_AddSettingsTable.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260512190401_AddSettingsTable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260512190401_AddSettingsTable.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260512190401_AddSettingsTable.cs",
+              "RelativeToolTip": "Migrations\\20260512190401_AddSettingsTable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T22:56:22.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "20260430225330_InitialCreate.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430225330_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260430225330_InitialCreate.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430225330_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\20260430225330_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T22:53:30.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "20260430221216_UpdateReservationsLogic.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430221216_UpdateReservationsLogic.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260430221216_UpdateReservationsLogic.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430221216_UpdateReservationsLogic.cs",
-              "RelativeToolTip": "Migrations\\20260430221216_UpdateReservationsLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T22:12:16.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ReservationDto.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\ReservationDto.cs",
-              "RelativeDocumentMoniker": "Models\\ReservationDto.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\ReservationDto.cs",
-              "RelativeToolTip": "Models\\ReservationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T01:13:20.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "20260430010142_AddNinetyParkingSpots.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430010142_AddNinetyParkingSpots.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260430010142_AddNinetyParkingSpots.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430010142_AddNinetyParkingSpots.cs",
-              "RelativeToolTip": "Migrations\\20260430010142_AddNinetyParkingSpots.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T01:01:42.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20260430004126_AddNinetyParkingSpots.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430004126_AddNinetyParkingSpots.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260430004126_AddNinetyParkingSpots.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430004126_AddNinetyParkingSpots.cs",
-              "RelativeToolTip": "Migrations\\20260430004126_AddNinetyParkingSpots.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T00:41:26.54Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "20260430003140_InitialFinalSync.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430003140_InitialFinalSync.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260430003140_InitialFinalSync.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430003140_InitialFinalSync.cs",
-              "RelativeToolTip": "Migrations\\20260430003140_InitialFinalSync.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T00:31:41.027Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "20260430002714_FinalSyncParkingSpotWithProperty.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430002714_FinalSyncParkingSpotWithProperty.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260430002714_FinalSyncParkingSpotWithProperty.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Migrations\\20260430002714_FinalSyncParkingSpotWithProperty.cs",
-              "RelativeToolTip": "Migrations\\20260430002714_FinalSyncParkingSpotWithProperty.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T00:27:14.446Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Views\\Reservation\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reservation\\Index.cshtml",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Views\\Reservation\\Index.cshtml",
-              "RelativeToolTip": "Views\\Reservation\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-30T00:20:58.938Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Views\\Reservation\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reservation\\Details.cshtml",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Views\\Reservation\\Details.cshtml",
-              "RelativeToolTip": "Views\\Reservation\\Details.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAIAwwBEAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-30T00:20:06.308Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Views\\Reservation\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reservation\\Delete.cshtml",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Views\\Reservation\\Delete.cshtml",
-              "RelativeToolTip": "Views\\Reservation\\Delete.cshtml",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAiwE8AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-30T00:15:38.165Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "Controllers\\DashboardController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAiwEQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T00:13:37.783Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Property.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\Property.cs",
-              "RelativeDocumentMoniker": "Models\\Property.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\Property.cs",
-              "RelativeToolTip": "Models\\Property.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA2wCsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T00:09:04.217Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ParkingSpot.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\ParkingSpot.cs",
-              "RelativeDocumentMoniker": "Models\\ParkingSpot.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\ParkingSpot.cs",
-              "RelativeToolTip": "Models\\ParkingSpot.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAywB0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T23:22:12.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAwF4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T22:34:08.05Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\Reservation.cs",
-              "RelativeDocumentMoniker": "Models\\Reservation.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\Reservation.cs",
-              "RelativeToolTip": "Models\\Reservation.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAiwDEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T22:26:22.91Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ReservationsController.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\ReservationsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReservationsController.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\ReservationsController.cs",
-              "RelativeToolTip": "Controllers\\ReservationsController.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAA5wI8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T21:43:38.577Z",
+              "WhenOpened": "2026-05-12T19:04:01.846Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAIwHQAAAAKAAAAAAAAAA==",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAUwGEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T21:36:31.087Z",
+              "WhenOpened": "2026-05-12T19:02:51.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\AppUser.cs",
-              "RelativeDocumentMoniker": "Models\\AppUser.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\AppUser.cs",
-              "RelativeToolTip": "Models\\AppUser.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAIwCAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T21:01:50.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAkwHUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T20:58:11.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "PaymentsController.cs",
-              "DocumentMoniker": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\PaymentsController.cs",
               "RelativeDocumentMoniker": "Controllers\\PaymentsController.cs",
-              "ToolTip": "D:\\New folder (3)\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\PaymentsController.cs",
               "RelativeToolTip": "Controllers\\PaymentsController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAkwCAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAASwGAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T20:53:26.211Z"
+              "WhenOpened": "2026-05-12T19:00:10.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SystemSettingsController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\SystemSettingsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SystemSettingsController.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\Controllers\\SystemSettingsController.cs",
+              "RelativeToolTip": "Controllers\\SystemSettingsController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADgvxgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T18:54:41.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SystemSettings.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\SystemSettings.cs",
+              "RelativeDocumentMoniker": "Models\\SystemSettings.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParkingF.API-main\\SmartParkingF.API-main\\Models\\SystemSettings.cs",
+              "RelativeToolTip": "Models\\SystemSettings.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T18:54:05.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

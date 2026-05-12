@@ -1234,6 +1234,40 @@ namespace SmartParkingF.API.Migrations
                     b.ToTable("Reservations");
                 });
 
+            modelBuilder.Entity("SmartParkingF.API.Models.SystemSettings", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApiSecurityKey")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BookingPermissions")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsMaintenanceMode")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("LastBackupDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ProjectName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SupportEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SystemSettings");
+                });
+
             modelBuilder.Entity("SmartParkingF.API.Models.ParkingSpot", b =>
                 {
                     b.HasOne("SmartParkingF.API.Models.Property", "Property")

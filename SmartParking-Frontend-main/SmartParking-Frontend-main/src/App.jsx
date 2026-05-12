@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, Outlet } from 'react-router-dom';
+
+// Components
 import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import AdminSidebar from './components/AdminSidebar'; // تأكد من استيراده
+import Footer from './components/Footer';
 
 // Public Pages
 import Home from './pages/Home';
@@ -12,7 +17,7 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import ForgotPassword from './pages/ForgotPassword';
 
-// Protected Pages (User)
+// Protected Pages (User Dashboard)
 import Dashboard from './pages/Dashboard';
 import ParkingReservations from './pages/ParkingReservations';
 import Payments from './pages/Payments';
@@ -33,16 +38,56 @@ const ScrollToTop = () => {
     return null;
 };
 
-// 🛡️ مكون الـ Layout لإدارة حماية المسارات وظهور الـ Navbar
+// 🛡️ مكون الـ Dashboard Layout (للمستخدم العادي)
+const DashboardLayout = () => {
+    const location = useLocation();
+    const getActivePage = () => {
+        const path = location.pathname;
+        if (path.includes('dashboard')) return 'overview';
+        if (path.includes('parking')) return 'parking';
+        if (path.includes('payments')) return 'payments';
+        if (path.includes('settings')) return 'settings';
+        return 'overview';
+    };
+
+    const userRaw = localStorage.getItem('user');
+    const user = userRaw ? JSON.parse(userRaw) : { name: 'User' };
+
+    return (
+        <div className="min-h-screen bg-[#F8FAFC]">
+            <div className="max-w-[1440px] mx-auto flex p-6 md:p-10 gap-6 md:gap-10">
+                <Sidebar activePage={getActivePage()} userName={user.name || user.userName} />
+                <main className="flex-1 overflow-hidden">
+                    <Outlet />
+                </main>
+            </div>
+        </div>
+    );
+};
+
+// 🛡️ مكون الـ Admin Layout (لضمان ثبات سايد بار الأدمن ومنع الـ Redirect)
+const AdminLayout = () => {
+    return (
+        <div className="flex min-h-screen bg-[#F8FAFC]">
+            {/* السايد بار الأسود هيثبت هنا */}
+            <AdminSidebar />
+            <main className="flex-1 overflow-y-auto">
+                {/* الصفحات هتفتح هنا */}
+                <Outlet />
+            </main>
+        </div>
+    );
+};
+
+// 🛡️ مكون الـ Layout العام لإدارة الحماية
 const Layout = ({ children }) => {
     const location = useLocation();
 
-    // استرجاع حالة تسجيل الدخول والبيانات
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     const userRaw = localStorage.getItem('user');
     const user = userRaw ? JSON.parse(userRaw) : null;
 
-    // التحقق من صلاحية الآدمن
+    // تحسين شرط الأدمن
     const isAdmin = user?.role?.toLowerCase() === 'admin' || user?.email === "admin@realstate.com";
 
     const authPaths = ['/login', '/signup', '/forgot-password', '/register'];
@@ -50,12 +95,17 @@ const Layout = ({ children }) => {
     const isPropertyDetailPath = location.pathname.startsWith('/property/');
     const isAdminPath = location.pathname.startsWith('/admin');
 
-    // 1. إذا كان مسجل دخول ويحاول دخول صفحات Auth (مثل Login)، حوله للـ Dashboard
+    // 1. لو مسجل دخول ميشوفش صفحات اللوجن
     if (isLoggedIn && authPaths.includes(location.pathname)) {
         return <Navigate to="/dashboard" replace />;
     }
 
-    // 2. حماية المسارات الخاصة: إذا لم يسجل دخول ويحاول دخول صفحة ليست عامة، حوله للـ Login
+    // 2. حماية صفحات الأدمن
+    if (isAdminPath && !isAdmin) {
+        return <Navigate to="/" replace />;
+    }
+
+    // 3. حماية الصفحات الخاصة للمستخدمين
     const isPublic = publicPaths.includes(location.pathname) || isPropertyDetailPath;
     const isAuthPage = authPaths.includes(location.pathname);
 
@@ -63,14 +113,10 @@ const Layout = ({ children }) => {
         return <Navigate to="/login" replace />;
     }
 
-    // 3. حماية مسارات الآدمن: إذا حاول شخص عادي دخول صفحات الآدمن، حوله للرئيسية
-    if (isAdminPath && !isAdmin) {
-        return <Navigate to="/" replace />;
-    }
-
-    // إدارة ظهور الـ Navbar (يختفي في صفحات الـ Auth والـ Admin)
-    const hideNavbarPaths = ['/login', '/signup', '/forgot-password', '/register'];
+    // إعدادات الظهور
+    const hideNavbarPaths = [...authPaths];
     const showNavbar = !hideNavbarPaths.includes(location.pathname) && !isAdminPath;
+    const showFooter = isPublic && !isAuthPage;
 
     return (
         <>
@@ -78,6 +124,7 @@ const Layout = ({ children }) => {
             <main className="w-full min-h-screen">
                 {children}
             </main>
+            {showFooter && <Footer />}
         </>
     );
 };
@@ -89,33 +136,39 @@ function App() {
             <div className="App min-h-screen bg-white">
                 <Layout>
                     <Routes>
-                        {/* 🌐 المسارات العامة (متاحة للكل) */}
+                        {/* 🌐 المسارات العامة */}
                         <Route path="/" element={<Home />} />
                         <Route path="/properties" element={<Properties />} />
                         <Route path="/property/:id" element={<PropertyDetails />} />
 
-                        {/* 🔐 مسارات الهوية (تختفي لو مسجل دخول) */}
+                        {/* 🔐 مسارات الهوية */}
                         <Route path="/login" element={<Login />} />
                         <Route path="/signup" element={<SignUp />} />
                         <Route path="/register" element={<SignUp />} />
                         <Route path="/forgot-password" element={<ForgotPassword />} />
 
-                        {/* 👤 مسارات المستخدم (تحتاج تسجيل دخول) */}
-                        <Route path="/dashboard" element={<Dashboard />} />
-                        <Route path="/parking" element={<ParkingReservations />} />
-                        <Route path="/payments" element={<Payments />} />
-                        <Route path="/settings" element={<Settings />} />
+                        {/* 👤 مسارات المستخدم (User Dashboard) */}
+                        <Route element={<DashboardLayout />}>
+                            <Route path="/dashboard" element={<Dashboard />} />
+                            <Route path="/parking" element={<ParkingReservations />} />
+                            <Route path="/payments" element={<Payments />} />
+                            <Route path="/settings" element={<Settings />} />
+                        </Route>
 
-                        {/* 🛠️ مسارات لوحة تحكم الآدمن */}
-                        <Route path="/admin/users" element={<AdminUsers />} />
-                        <Route path="/admin/add-property" element={<AdminAddProperty />} />
-                        <Route path="/admin/settings" element={<AdminSystemSettings />} />
-                        <Route path="/admin/reports" element={<AdminReports />} />
+                        {/* 🛠️ مسارات لوحة تحكم الآدمن (Admin Panel) */}
+                        {/* تم تجميعها هنا داخل AdminLayout لضمان عدم الخروج للهوم */}
+                        <Route path="/admin" element={<AdminLayout />}>
+                            <Route index element={<Navigate to="/admin/users" replace />} />
+                            <Route path="users" element={<AdminUsers />} />
+                            <Route path="add-property" element={<AdminAddProperty />} />
+                            <Route path="settings" element={<AdminSystemSettings />} />
+                            <Route path="reports" element={<AdminReports />} />
 
-                        {/* تحويل المسار العام لـ /admin إلى قائمة المستخدمين */}
-                        <Route path="/admin" element={<Navigate to="/admin/users" replace />} />
+                            {/* ✅ دي اللي كانت ناقصة: السماح بفتح هذه الصفحات داخل الأدمن */}
+                            <Route path="properties" element={<Properties />} />
+                            <Route path="parking" element={<ParkingReservations />} />
+                        </Route>
 
-                        {/* 404 - أي مسار خاطئ يرجع للرئيسية */}
                         <Route path="*" element={<Navigate to="/" replace />} />
                     </Routes>
                 </Layout>

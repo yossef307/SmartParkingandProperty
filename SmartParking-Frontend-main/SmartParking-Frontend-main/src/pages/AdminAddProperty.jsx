@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import { faker } from '@faker-js/faker'; // تأكد من تثبيت المكتبة: npm install @faker-js/faker
 import {
     Building2, MapPin, DollarSign, Image as ImageIcon,
-    ArrowLeft, Plus, CheckCircle2, Loader2, Info, Layout
+    ArrowLeft, Plus, CheckCircle2, Loader2, Info, Layout, Sparkles
 } from 'lucide-react';
 
 const AdminAddProperty = () => {
@@ -15,15 +16,38 @@ const AdminAddProperty = () => {
         name: '',
         location: '',
         description: '',
-        pricePerHour: '',   // سنبقي الاسم البرمجي كما هو ليتوافق مع الـ API الحالي
+        pricePerHour: '',
         totalSpots: '',
         imageUrl: '',
         type: 'Villa',
-        bedrooms: 0,
-        bathrooms: 0,
+        bedrooms: 2,
+        bathrooms: 2,
         rating: 5,
         hasSmartParking: true
     });
+
+    // ✨ دالة توليد البيانات السحرية
+    const generateMagicData = () => {
+        const types = ['Villa', 'Apartment', 'Office', 'Studio'];
+        const selectedType = types[Math.floor(Math.random() * types.length)];
+
+        // جلب صورة عشوائية حقيقية للعقارات
+        const randomImageId = Math.floor(Math.random() * 1000);
+        const randomImageUrl = `https://loremflickr.com/800/600/building,villa,apartment?lock=${randomImageId}`;
+
+        setFormData({
+            ...formData,
+            name: `${faker.company.name()} ${selectedType}`,
+            location: `${faker.location.city()}, Egypt`,
+            description: faker.lorem.paragraph(2),
+            pricePerHour: faker.number.int({ min: 100, max: 2000 }).toString(),
+            totalSpots: faker.number.int({ min: 5, max: 150 }).toString(),
+            imageUrl: randomImageUrl,
+            type: selectedType,
+            bedrooms: faker.number.int({ min: 1, max: 6 }),
+            bathrooms: faker.number.int({ min: 1, max: 4 })
+        });
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -32,7 +56,7 @@ const AdminAddProperty = () => {
         try {
             const dataToSubmit = {
                 ...formData,
-                pricePerHour: parseFloat(formData.pricePerHour), // ترسل كـ Float للـ API
+                pricePerHour: parseFloat(formData.pricePerHour),
                 totalSpots: parseInt(formData.totalSpots),
                 bedrooms: parseInt(formData.bedrooms),
                 bathrooms: parseInt(formData.bathrooms)
@@ -64,6 +88,18 @@ const AdminAddProperty = () => {
                         </Link>
                         <h1 className="text-3xl font-black text-slate-800">Add New Property</h1>
                     </div>
+
+                    {/* زر الـ Magic Data الذكي */}
+                    {!success && (
+                        <button
+                            type="button"
+                            onClick={generateMagicData}
+                            className="flex items-center gap-2 bg-amber-50 text-amber-600 px-5 py-2.5 rounded-2xl border border-amber-200 font-bold hover:bg-amber-100 transition-all active:scale-95 shadow-sm shadow-amber-100"
+                        >
+                            <Sparkles size={18} />
+                            Generate Magic Data
+                        </button>
+                    )}
                 </div>
 
                 {success ? (
@@ -96,7 +132,7 @@ const AdminAddProperty = () => {
                                 </div>
                             </div>
 
-                            {/* Price Per Day (تم التعديل هنا) */}
+                            {/* Price Per Day */}
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-slate-700 ml-1">Price / Day (EGP)</label>
                                 <div className="relative group">
