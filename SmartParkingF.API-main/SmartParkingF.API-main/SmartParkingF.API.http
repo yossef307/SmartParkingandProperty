@@ -1,6 +1,0 @@
-      @SmartParkingF.API_HostAddress = http://localhost:5079
-
-GET {{SmartParkingF.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
