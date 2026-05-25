@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SmartParkingF.API-main",
+    "\\SmartParkingF.API-main\\Controllers",
+    "\\SmartParkingF.API-main\\Data",
+    "\\SmartParkingF.API-main\\Migrations",
+    "\\SmartParkingF.API-main\\Models",
+    "\\SmartParkingF.API-main\\Services"
+  ],
+  "SelectedNode": "\\SmartParkingF.API-main\\Services\\PasswordService.cs",
+  "PreviewInSolutionExplorer": false
+}
