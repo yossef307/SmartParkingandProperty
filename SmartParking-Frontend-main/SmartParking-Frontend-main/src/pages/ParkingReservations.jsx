@@ -6,7 +6,7 @@ import parkingService from '../services/parkingService';
 /**
  * Parking Reservation Management Component - RealPark System
  * Features: Dynamic QR Code & Custom Reservation Duration with Live Price Calculation
- * Fully Fixed Build/Syntax Error
+ * Fixed: Cancel now uses reservationId instead of spotId
  */
 const ParkingReservations = () => {
     const [spots, setSpots] = useState([]);
@@ -14,6 +14,7 @@ const ParkingReservations = () => {
     const [loading, setLoading] = useState(true);
     const [actionLoading, setActionLoading] = useState(false);
     const [confirmedBooking, setConfirmedBooking] = useState(null);
+    const [reservations, setReservations] = useState([]); // Store active reservations
 
     // Control reservation hours duration (Default: 1 Hour)
     const [reservationHours, setReservationHours] = useState(1);
@@ -35,10 +36,30 @@ const ParkingReservations = () => {
                 zone: s.zone || (s.spotNumber.match(/^[A-Z]/i) ? s.spotNumber[0].toUpperCase() : 'A'),
                 price: s.pricePerHour || 0,
                 status: s.status,
-                propertyId: s.propertyId
+                propertyId: s.propertyId,
+                reservationId: s.reservationId || null // Store reservation ID if available
             }));
 
             setSpots(formatted);
+
+            // Also fetch active reservations to map spotId -> reservationId
+            try {
+                // Get userId from localStorage or use default
+                const storedUser = localStorage.getItem('user');
+                const userId = storedUser ? JSON.parse(storedUser).id : DEFAULT_USER_ID;
+                const reservationsData = await parkingService.getReservations(userId);
+                setReservations(reservationsData || []);
+            } catch (err) {
+                console.log("Could not fetch reservations:", err);
+                // Try fetching all reservations as fallback
+                try {
+                    const allReservations = await parkingService.getAllReservations();
+                    setReservations(allReservations || []);
+                } catch (e) {
+                    console.log("Could not fetch all reservations:", e);
+                }
+            }
+
         } catch (error) {
             console.error("Data loading error:", error);
         } finally {
@@ -49,6 +70,15 @@ const ParkingReservations = () => {
     useEffect(() => {
         loadData();
     }, []);
+
+    // Find reservation ID for a given spot
+    const findReservationIdForSpot = (spotName) => {
+        const reservation = reservations.find(r =>
+            r.spotNumber === spotName &&
+            (r.status === 'Confirmed' || r.status === 'Active' || r.status === 'Pending')
+        );
+        return reservation?.id || null;
+    };
 
     // Live calculation of total price based on selected hours
     const calculatedTotalPrice = selectedSpot ? (Number(selectedSpot.price) * reservationHours) : 0;
@@ -65,7 +95,7 @@ const ParkingReservations = () => {
         const now = new Date();
         const startTime = now.toISOString().split('.')[0] + "Z";
 
-        // Dynamic dynamic calculation of endTime based on chosen duration
+        // Dynamic calculation of endTime based on chosen duration
         const endDateTime = new Date(now.getTime() + (reservationHours * 60 * 60 * 1000));
         const endTime = endDateTime.toISOString().split('.')[0] + "Z";
 
@@ -98,37 +128,55 @@ const ParkingReservations = () => {
 
             if (responseData?.id) {
                 setConfirmedBooking(prev => ({ ...prev, reservationId: responseData.id }));
+                // Add new reservation to local state
+                setReservations(prev => [...prev, {
+                    id: responseData.id,
+                    spotNumber: selectedSpot.name,
+                    status: 'Confirmed'
+                }]);
             }
 
-            alert(`✅ Reservation for spot ${selectedSpot.name} for (${reservationHours} Hours) confirmed successfully!`);
+            alert(`Reservation for spot ${selectedSpot.name} for (${reservationHours} Hours) confirmed successfully!`);
             setSelectedSpot(null);
             await loadData();
 
         } catch (error) {
             console.error("API Error:", error.response?.data);
-            alert(`⚠️ UI Simulated Mode:\nSaves locally for presentation, but API connection failed.`);
+            alert(`UI Simulated Mode:\nSaves locally for presentation, but API connection failed.`);
             setSelectedSpot(null);
         } finally {
             setActionLoading(false);
         }
     };
 
-    // Handle reservation cancellation
+    // Handle reservation cancellation - FIXED: Now uses reservationId
     const handleCancel = async () => {
         if (!selectedSpot) return;
 
-        if (!window.confirm(`Are you sure you want to cancel the reservation for ${selectedSpot.name}?`)) return;
+        // Find the reservation ID for this spot
+        const reservationId = findReservationIdForSpot(selectedSpot.name);
+
+        if (!reservationId) {
+            alert(`Error: Could not find active reservation for spot ${selectedSpot.name}. Please refresh the page.`);
+            await loadData(); // Refresh data
+            return;
+        }
+
+        if (!window.confirm(`Are you sure you want to cancel the reservation for ${selectedSpot.name}? (Reservation ID: ${reservationId})`)) return;
 
         setActionLoading(true);
         try {
-            await parkingService.cancelReservation(selectedSpot.id);
-            alert(`✅ Reservation for ${selectedSpot.name} has been cancelled`);
+            // Use reservationId instead of spotId
+            await parkingService.cancelReservation(reservationId);
+            alert(`Reservation #${reservationId} for ${selectedSpot.name} has been cancelled`);
             setSelectedSpot(null);
             setConfirmedBooking(null);
+            // Remove from local reservations
+            setReservations(prev => prev.filter(r => r.id !== reservationId));
             await loadData();
         } catch (e) {
             const errorMsg = e.response?.data?.message || "Cancellation failed.";
-            alert(`❌ ${errorMsg}`);
+            alert(`Error: ${errorMsg}`);
         } finally {
             setActionLoading(false);
         }
@@ -188,14 +236,16 @@ const ParkingReservations = () => {
                                     {zoneSpots.map(spot => {
                                         const isOccupied = spot.status?.toLowerCase() !== 'available';
                                         const isSelected = selectedSpot?.id === spot.id;
+                                        const hasReservation = findReservationIdForSpot(spot.name);
 
                                         return (
                                             <button
                                                 key={spot.id}
                                                 onClick={() => handleSpotSelection(spot)}
+                                                title={hasReservation ? `Reservation ID: ${hasReservation}` : 'Available'}
                                                 className={`h-14 rounded-2xl border-2 flex items-center justify-center transition-all font-black text-xs
                                                     ${isOccupied
-                                                        ? 'bg-blue-600 border-blue-600 text-white shadow-md cursor-default opacity-90'
+                                                        ? 'bg-blue-600 border-blue-600 text-white shadow-md cursor-pointer opacity-90 hover:bg-blue-700'
                                                         : isSelected
                                                             ? 'border-blue-600 bg-blue-50 text-blue-600 scale-105 shadow-inner'
                                                             : 'bg-white border-slate-100 text-blue-600 hover:border-blue-300 hover:bg-slate-50'}`}
@@ -236,6 +286,13 @@ const ParkingReservations = () => {
                                     <span className="text-slate-400 font-bold">Rate</span>
                                     <span className="font-black text-slate-800">${selectedSpot.price}/hr</span>
                                 </div>
+                                {/* Show Reservation ID if spot is occupied */}
+                                {selectedSpot.status?.toLowerCase() !== 'available' && findReservationIdForSpot(selectedSpot.name) && (
+                                    <div className="flex justify-between items-center border-t border-slate-200 pt-4">
+                                        <span className="text-slate-400 font-bold">Reservation ID</span>
+                                        <span className="font-black text-blue-600">#{findReservationIdForSpot(selectedSpot.name)}</span>
+                                    </div>
+                                )}
                             </div>
 
                             {/* Dropdown Input layout for Duration selection */}
@@ -279,11 +336,11 @@ const ParkingReservations = () => {
                             ) : (
                                 <button
                                     onClick={handleCancel}
-                                    disabled={actionLoading}
-                                    className="w-full bg-red-50 text-red-600 py-5 rounded-[24px] font-black flex items-center justify-center gap-2 hover:bg-red-100 transition-all"
+                                    disabled={actionLoading || !findReservationIdForSpot(selectedSpot.name)}
+                                    className="w-full bg-red-50 text-red-600 py-5 rounded-[24px] font-black flex items-center justify-center gap-2 hover:bg-red-100 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     {actionLoading ? <Loader2 className="animate-spin" /> : <XCircle size={22} />}
-                                    Cancel Reservation
+                                    Cancel Reservation {findReservationIdForSpot(selectedSpot.name) ? `#${findReservationIdForSpot(selectedSpot.name)}` : ''}
                                 </button>
                             )}
 

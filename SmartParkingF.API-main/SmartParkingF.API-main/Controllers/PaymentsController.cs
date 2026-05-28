@@ -22,7 +22,8 @@ namespace SmartParkingF.API.Controllers
             var userExists = await _context.Users.AnyAsync(u => u.Id == userId);
             if (!userExists) return NotFound("المستخدم غير موجود");
 
-            var history = await _context.Reservations
+            // 1. جلب حجوزات الباركينج
+            var reservationHistory = await _context.Reservations
                 .Include(r => r.ParkingSpot)
                 .Include(r => r.Property)
                 .Where(r => r.UserId == userId)
@@ -30,15 +31,58 @@ namespace SmartParkingF.API.Controllers
                 .Select(r => new {
                     Id = r.Id,
                     TransactionId = "TXN-" + r.Id.ToString().PadLeft(6, '0'),
-                    Date = r.StartTime.ToString("MMM dd, yyyy"),
-                    Method = "Visa .... 4242",
+                    Date = r.CreatedAt.ToString("MMM dd, yyyy"),
+                    Method = "Credit Card (Visa .... 4242)",
                     Status = r.Status,
                     Amount = r.TotalPrice,
-                    PropertyName = r.Property != null ? r.Property.Name : "Smart Parking"
+                    PropertyName = r.Property != null ? r.Property.Name : "Smart Parking",
+                    Type = "Parking Booking"
                 })
                 .ToListAsync();
 
-            return Ok(history);
+            // 2. جلب مشتريات العقارات (Sales)
+            var salesHistory = await _context.Sales
+                .Include(s => s.Property)
+                .Where(s => s.BuyerId == userId)
+                .OrderByDescending(s => s.CreatedAt)
+                .Select(s => new {
+                    Id = s.Id,
+                    TransactionId = "SALE-" + s.Id.ToString().PadLeft(6, '0'),
+                    Date = s.CreatedAt.ToString("MMM dd, yyyy"),
+                    Method = s.PaymentMethod ?? "Credit Card (Visa .... 4242)",
+                    Status = s.Status,
+                    Amount = s.SalePrice,
+                    PropertyName = s.Property != null ? s.Property.Name : "Property Purchase",
+                    Type = "Property Purchase"
+                })
+                .ToListAsync();
+
+            // 3. دمج كل المعاملات وترتيبها من الأحدث للأقدم
+            var allHistory = reservationHistory
+                .Select(r => new {
+                    r.Id,
+                    r.TransactionId,
+                    r.Date,
+                    r.Method,
+                    r.Status,
+                    r.Amount,
+                    r.PropertyName,
+                    r.Type
+                })
+                .Concat(salesHistory.Select(s => new {
+                    s.Id,
+                    s.TransactionId,
+                    s.Date,
+                    s.Method,
+                    s.Status,
+                    s.Amount,
+                    s.PropertyName,
+                    s.Type
+                }))
+                .OrderByDescending(t => t.Date)
+                .ToList();
+
+            return Ok(allHistory);
         }
 
         [HttpPost("Process")]
@@ -52,15 +96,11 @@ namespace SmartParkingF.API.Controllers
                 {
                     UserId = request.UserId,
                     PropertyId = request.PropertyId,
-
-                    // التعديل: إذا لم يوجد موقف، نرسل null بدلاً من 0 لتجنب خطأ الـ Foreign Key
                     ParkingSpotId = request.ParkingSpotId > 0 ? request.ParkingSpotId : null,
-
                     TotalPrice = request.Amount,
                     StartTime = DateTime.Now,
                     EndTime = DateTime.Now.AddDays(1),
                     Status = "Confirmed"
-                    // ملاحظة: إذا كان الـ Model يتطلب حقولاً أخرى (مثل CreatedAt)، أضفها هنا
                 };
 
                 _context.Reservations.Add(newReservation);
@@ -74,7 +114,6 @@ namespace SmartParkingF.API.Controllers
             }
             catch (DbUpdateException dbEx)
             {
-                // هذا الجزء سيكشف لنا السبب الحقيقي في الـ Console أو الـ Response
                 var innerMessage = dbEx.InnerException?.Message ?? dbEx.Message;
                 return StatusCode(500, $"خطأ في قاعدة البيانات: {innerMessage}");
             }

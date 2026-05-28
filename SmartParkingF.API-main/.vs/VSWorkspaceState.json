@@ -8,6 +8,6 @@
     "\\SmartParkingF.API-main\\Models",
     "\\SmartParkingF.API-main\\Services"
   ],
-  "SelectedNode": "\\SmartParkingF.API-main\\Services\\PasswordService.cs",
+  "SelectedNode": "\\SmartParkingF.API-main\\Data\\ApplicationDbContext.cs",
   "PreviewInSolutionExplorer": false
 }

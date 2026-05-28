@@ -41,25 +41,19 @@
               "text/plain": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ParkingSpot"
-                  }
+                  "items": { }
                 }
               },
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ParkingSpot"
-                  }
+                  "items": { }
                 }
               },
               "text/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ParkingSpot"
-                  }
+                  "items": { }
                 }
               }
             }
@@ -113,6 +107,78 @@
         }
       }
     },
+    "/api/ParkingSpots/ByProperty/{propertyId}": {
+      "get": {
+        "tags": [
+          "ParkingSpots"
+        ],
+        "parameters": [
+          {
+            "name": "propertyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ParkingSpots/AvailableInZone": {
+      "get": {
+        "tags": [
+          "ParkingSpots"
+        ],
+        "parameters": [
+          {
+            "name": "propertyId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "zone",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/ParkingSpots/{id}": {
       "get": {
         "tags": [
@@ -131,24 +197,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ParkingSpot"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ParkingSpot"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ParkingSpot"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
@@ -636,6 +685,133 @@
         }
       }
     },
+    "/api/Sales": {
+      "get": {
+        "tags": [
+          "Sales"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Sales"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SaleDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SaleDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SaleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Sales/user/{userId}": {
+      "get": {
+        "tags": [
+          "Sales"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Sales/{saleId}": {
+      "delete": {
+        "tags": [
+          "Sales"
+        ],
+        "parameters": [
+          {
+            "name": "saleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Settings": {
       "get": {
         "tags": [
@@ -1075,6 +1251,18 @@
             "type": "number",
             "format": "double"
           },
+          "listingType": {
+            "type": "string",
+            "nullable": true
+          },
+          "salePrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isSold": {
+            "type": "boolean"
+          },
           "totalSpots": {
             "type": "integer",
             "format": "int32"
@@ -1106,6 +1294,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Reservation"
+            },
+            "nullable": true
+          },
+          "sales": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sale"
             },
             "nullable": true
           }
@@ -1262,6 +1457,73 @@
         },
         "additionalProperties": false
       },
+      "Sale": {
+        "required": [
+          "buyerId",
+          "propertyId"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "propertyId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "property": {
+            "$ref": "#/components/schemas/Property"
+          },
+          "buyerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "buyer": {
+            "$ref": "#/components/schemas/AppUser"
+          },
+          "salePrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "paymentMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SaleDto": {
+        "type": "object",
+        "properties": {
+          "propertyId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "buyerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paymentMethod": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "SystemSettings": {
         "required": [
           "projectName",
@@ -1359,6 +1621,9 @@
     },
     {
       "name": "Reservations"
+    },
+    {
+      "name": "Sales"
     },
     {
       "name": "Settings"

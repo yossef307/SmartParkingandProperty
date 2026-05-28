@@ -16,7 +16,7 @@ namespace SmartParkingF.API.Controllers
             _context = context;
         }
 
-        // 1. جلب كل العقارات (تعديل لضمان عدم رجوع قائمة فارغة أثناء الفحص)
+        // 1. جلب كل العقارات
         [HttpGet]
         public async Task<IActionResult> GetProperties()
         {
@@ -24,8 +24,6 @@ namespace SmartParkingF.API.Controllers
             {
                 var properties = await _context.Properties.ToListAsync();
 
-                // إذا كانت قاعدة البيانات فارغة تماماً، سنعيد بيانات وهمية للتجربة فقط
-                // بمجرد أن تظهر هذه البيانات في الـ React، ستعرف أن الربط سليم 100%
                 if (properties == null || properties.Count == 0)
                 {
                     var fallback = new List<object>
@@ -67,7 +65,7 @@ namespace SmartParkingF.API.Controllers
         {
             if (property == null) return BadRequest();
 
-            property.CreatedAt = DateTime.Now; // تعيين الوقت تلقائياً
+            property.CreatedAt = DateTime.Now;
             _context.Properties.Add(property);
             await _context.SaveChangesAsync();
 

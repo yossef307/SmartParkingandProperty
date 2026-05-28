@@ -236,226 +236,6 @@ namespace SmartParkingF.API.Migrations
                         new
                         {
                             Id = 11,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A11",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A12",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A13",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A14",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A15",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A16",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A17",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A18",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 19,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A19",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 20,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A20",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A21",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 22,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A22",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 23,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A23",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 24,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A24",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 25,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A25",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 26,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A26",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 27,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A27",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 28,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A28",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 29,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A29",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 30,
-                            Location = "Ground Floor",
-                            PricePerHour = 5.0m,
-                            PricePerNight = 50.0m,
-                            PropertyId = 1,
-                            SpotNumber = "A30",
-                            Status = "Available",
-                            Zone = "A"
-                        },
-                        new
-                        {
-                            Id = 31,
                             Location = "First Floor",
                             PricePerHour = 10.0m,
                             PricePerNight = 80.0m,
@@ -466,7 +246,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 32,
+                            Id = 12,
                             Location = "First Floor",
                             PricePerHour = 10.0m,
                             PricePerNight = 80.0m,
@@ -477,7 +257,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 33,
+                            Id = 13,
                             Location = "First Floor",
                             PricePerHour = 10.0m,
                             PricePerNight = 80.0m,
@@ -488,7 +268,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 34,
+                            Id = 14,
                             Location = "First Floor",
                             PricePerHour = 10.0m,
                             PricePerNight = 80.0m,
@@ -499,7 +279,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 35,
+                            Id = 15,
                             Location = "First Floor",
                             PricePerHour = 10.0m,
                             PricePerNight = 80.0m,
@@ -510,7 +290,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 36,
+                            Id = 16,
                             Location = "First Floor",
                             PricePerHour = 10.0m,
                             PricePerNight = 80.0m,
@@ -521,7 +301,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 37,
+                            Id = 17,
                             Location = "First Floor",
                             PricePerHour = 10.0m,
                             PricePerNight = 80.0m,
@@ -532,7 +312,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 38,
+                            Id = 18,
                             Location = "First Floor",
                             PricePerHour = 10.0m,
                             PricePerNight = 80.0m,
@@ -543,7 +323,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 39,
+                            Id = 19,
                             Location = "First Floor",
                             PricePerHour = 10.0m,
                             PricePerNight = 80.0m,
@@ -554,7 +334,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 40,
+                            Id = 20,
                             Location = "First Floor",
                             PricePerHour = 10.0m,
                             PricePerNight = 80.0m,
@@ -565,227 +345,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 41,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B11",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 42,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B12",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 43,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B13",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 44,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B14",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 45,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B15",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 46,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B16",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 47,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B17",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 48,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B18",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 49,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B19",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 50,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B20",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 51,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B21",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 52,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B22",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 53,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B23",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 54,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B24",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 55,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B25",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 56,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B26",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 57,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B27",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 58,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B28",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 59,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B29",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 60,
-                            Location = "First Floor",
-                            PricePerHour = 10.0m,
-                            PricePerNight = 80.0m,
-                            PropertyId = 1,
-                            SpotNumber = "B30",
-                            Status = "Available",
-                            Zone = "B"
-                        },
-                        new
-                        {
-                            Id = 61,
+                            Id = 21,
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
@@ -796,7 +356,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 62,
+                            Id = 22,
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
@@ -807,7 +367,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 63,
+                            Id = 23,
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
@@ -818,7 +378,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 64,
+                            Id = 24,
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
@@ -829,7 +389,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 65,
+                            Id = 25,
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
@@ -840,7 +400,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 66,
+                            Id = 26,
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
@@ -851,7 +411,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 67,
+                            Id = 27,
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
@@ -862,7 +422,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 68,
+                            Id = 28,
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
@@ -873,7 +433,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 69,
+                            Id = 29,
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
@@ -884,7 +444,7 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 70,
+                            Id = 30,
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
@@ -895,113 +455,553 @@ namespace SmartParkingF.API.Migrations
                         },
                         new
                         {
-                            Id = 71,
+                            Id = 31,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 2,
+                            SpotNumber = "A1",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 2,
+                            SpotNumber = "A2",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 2,
+                            SpotNumber = "A3",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 2,
+                            SpotNumber = "A4",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 2,
+                            SpotNumber = "A5",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 2,
+                            SpotNumber = "A6",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 2,
+                            SpotNumber = "A7",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 2,
+                            SpotNumber = "A8",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 2,
+                            SpotNumber = "A9",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 2,
+                            SpotNumber = "A10",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 2,
+                            SpotNumber = "B1",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 2,
+                            SpotNumber = "B2",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 2,
+                            SpotNumber = "B3",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 2,
+                            SpotNumber = "B4",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 2,
+                            SpotNumber = "B5",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 2,
+                            SpotNumber = "B6",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 2,
+                            SpotNumber = "B7",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 2,
+                            SpotNumber = "B8",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 2,
+                            SpotNumber = "B9",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 2,
+                            SpotNumber = "B10",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 51,
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C11",
+                            PropertyId = 2,
+                            SpotNumber = "C1",
                             Status = "Available",
                             Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 2,
+                            SpotNumber = "C2",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 2,
+                            SpotNumber = "C3",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 2,
+                            SpotNumber = "C4",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 2,
+                            SpotNumber = "C5",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 2,
+                            SpotNumber = "C6",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 57,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 2,
+                            SpotNumber = "C7",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 58,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 2,
+                            SpotNumber = "C8",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 59,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 2,
+                            SpotNumber = "C9",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 60,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 2,
+                            SpotNumber = "C10",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 61,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 3,
+                            SpotNumber = "A1",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 62,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 3,
+                            SpotNumber = "A2",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 63,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 3,
+                            SpotNumber = "A3",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 64,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 3,
+                            SpotNumber = "A4",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 65,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 3,
+                            SpotNumber = "A5",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 66,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 3,
+                            SpotNumber = "A6",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 67,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 3,
+                            SpotNumber = "A7",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 68,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 3,
+                            SpotNumber = "A8",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 69,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 3,
+                            SpotNumber = "A9",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 70,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 3,
+                            SpotNumber = "A10",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 71,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 3,
+                            SpotNumber = "B1",
+                            Status = "Available",
+                            Zone = "B"
                         },
                         new
                         {
                             Id = 72,
-                            Location = "VIP Section",
-                            PricePerHour = 15.0m,
-                            PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C12",
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 3,
+                            SpotNumber = "B2",
                             Status = "Available",
-                            Zone = "C"
+                            Zone = "B"
                         },
                         new
                         {
                             Id = 73,
-                            Location = "VIP Section",
-                            PricePerHour = 15.0m,
-                            PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C13",
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 3,
+                            SpotNumber = "B3",
                             Status = "Available",
-                            Zone = "C"
+                            Zone = "B"
                         },
                         new
                         {
                             Id = 74,
-                            Location = "VIP Section",
-                            PricePerHour = 15.0m,
-                            PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C14",
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 3,
+                            SpotNumber = "B4",
                             Status = "Available",
-                            Zone = "C"
+                            Zone = "B"
                         },
                         new
                         {
                             Id = 75,
-                            Location = "VIP Section",
-                            PricePerHour = 15.0m,
-                            PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C15",
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 3,
+                            SpotNumber = "B5",
                             Status = "Available",
-                            Zone = "C"
+                            Zone = "B"
                         },
                         new
                         {
                             Id = 76,
-                            Location = "VIP Section",
-                            PricePerHour = 15.0m,
-                            PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C16",
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 3,
+                            SpotNumber = "B6",
                             Status = "Available",
-                            Zone = "C"
+                            Zone = "B"
                         },
                         new
                         {
                             Id = 77,
-                            Location = "VIP Section",
-                            PricePerHour = 15.0m,
-                            PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C17",
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 3,
+                            SpotNumber = "B7",
                             Status = "Available",
-                            Zone = "C"
+                            Zone = "B"
                         },
                         new
                         {
                             Id = 78,
-                            Location = "VIP Section",
-                            PricePerHour = 15.0m,
-                            PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C18",
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 3,
+                            SpotNumber = "B8",
                             Status = "Available",
-                            Zone = "C"
+                            Zone = "B"
                         },
                         new
                         {
                             Id = 79,
-                            Location = "VIP Section",
-                            PricePerHour = 15.0m,
-                            PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C19",
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 3,
+                            SpotNumber = "B9",
                             Status = "Available",
-                            Zone = "C"
+                            Zone = "B"
                         },
                         new
                         {
                             Id = 80,
-                            Location = "VIP Section",
-                            PricePerHour = 15.0m,
-                            PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C20",
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 3,
+                            SpotNumber = "B10",
                             Status = "Available",
-                            Zone = "C"
+                            Zone = "B"
                         },
                         new
                         {
@@ -1009,8 +1009,8 @@ namespace SmartParkingF.API.Migrations
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C21",
+                            PropertyId = 3,
+                            SpotNumber = "C1",
                             Status = "Available",
                             Zone = "C"
                         },
@@ -1020,8 +1020,8 @@ namespace SmartParkingF.API.Migrations
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C22",
+                            PropertyId = 3,
+                            SpotNumber = "C2",
                             Status = "Available",
                             Zone = "C"
                         },
@@ -1031,8 +1031,8 @@ namespace SmartParkingF.API.Migrations
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C23",
+                            PropertyId = 3,
+                            SpotNumber = "C3",
                             Status = "Available",
                             Zone = "C"
                         },
@@ -1042,8 +1042,8 @@ namespace SmartParkingF.API.Migrations
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C24",
+                            PropertyId = 3,
+                            SpotNumber = "C4",
                             Status = "Available",
                             Zone = "C"
                         },
@@ -1053,8 +1053,8 @@ namespace SmartParkingF.API.Migrations
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C25",
+                            PropertyId = 3,
+                            SpotNumber = "C5",
                             Status = "Available",
                             Zone = "C"
                         },
@@ -1064,8 +1064,8 @@ namespace SmartParkingF.API.Migrations
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C26",
+                            PropertyId = 3,
+                            SpotNumber = "C6",
                             Status = "Available",
                             Zone = "C"
                         },
@@ -1075,8 +1075,8 @@ namespace SmartParkingF.API.Migrations
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C27",
+                            PropertyId = 3,
+                            SpotNumber = "C7",
                             Status = "Available",
                             Zone = "C"
                         },
@@ -1086,8 +1086,8 @@ namespace SmartParkingF.API.Migrations
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C28",
+                            PropertyId = 3,
+                            SpotNumber = "C8",
                             Status = "Available",
                             Zone = "C"
                         },
@@ -1097,8 +1097,8 @@ namespace SmartParkingF.API.Migrations
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C29",
+                            PropertyId = 3,
+                            SpotNumber = "C9",
                             Status = "Available",
                             Zone = "C"
                         },
@@ -1108,8 +1108,1988 @@ namespace SmartParkingF.API.Migrations
                             Location = "VIP Section",
                             PricePerHour = 15.0m,
                             PricePerNight = 120.0m,
-                            PropertyId = 1,
-                            SpotNumber = "C30",
+                            PropertyId = 3,
+                            SpotNumber = "C10",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 91,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 4,
+                            SpotNumber = "A1",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 92,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 4,
+                            SpotNumber = "A2",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 93,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 4,
+                            SpotNumber = "A3",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 94,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 4,
+                            SpotNumber = "A4",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 95,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 4,
+                            SpotNumber = "A5",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 96,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 4,
+                            SpotNumber = "A6",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 97,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 4,
+                            SpotNumber = "A7",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 98,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 4,
+                            SpotNumber = "A8",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 99,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 4,
+                            SpotNumber = "A9",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 100,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 4,
+                            SpotNumber = "A10",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 101,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 4,
+                            SpotNumber = "B1",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 102,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 4,
+                            SpotNumber = "B2",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 103,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 4,
+                            SpotNumber = "B3",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 104,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 4,
+                            SpotNumber = "B4",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 105,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 4,
+                            SpotNumber = "B5",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 106,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 4,
+                            SpotNumber = "B6",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 107,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 4,
+                            SpotNumber = "B7",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 108,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 4,
+                            SpotNumber = "B8",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 109,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 4,
+                            SpotNumber = "B9",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 110,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 4,
+                            SpotNumber = "B10",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 111,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 4,
+                            SpotNumber = "C1",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 112,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 4,
+                            SpotNumber = "C2",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 113,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 4,
+                            SpotNumber = "C3",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 114,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 4,
+                            SpotNumber = "C4",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 115,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 4,
+                            SpotNumber = "C5",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 116,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 4,
+                            SpotNumber = "C6",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 117,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 4,
+                            SpotNumber = "C7",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 118,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 4,
+                            SpotNumber = "C8",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 119,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 4,
+                            SpotNumber = "C9",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 120,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 4,
+                            SpotNumber = "C10",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 121,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 5,
+                            SpotNumber = "A1",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 122,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 5,
+                            SpotNumber = "A2",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 123,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 5,
+                            SpotNumber = "A3",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 124,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 5,
+                            SpotNumber = "A4",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 125,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 5,
+                            SpotNumber = "A5",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 126,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 5,
+                            SpotNumber = "A6",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 127,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 5,
+                            SpotNumber = "A7",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 128,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 5,
+                            SpotNumber = "A8",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 129,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 5,
+                            SpotNumber = "A9",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 130,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 5,
+                            SpotNumber = "A10",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 131,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 5,
+                            SpotNumber = "B1",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 132,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 5,
+                            SpotNumber = "B2",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 133,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 5,
+                            SpotNumber = "B3",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 134,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 5,
+                            SpotNumber = "B4",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 135,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 5,
+                            SpotNumber = "B5",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 136,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 5,
+                            SpotNumber = "B6",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 137,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 5,
+                            SpotNumber = "B7",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 138,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 5,
+                            SpotNumber = "B8",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 139,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 5,
+                            SpotNumber = "B9",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 140,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 5,
+                            SpotNumber = "B10",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 141,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 5,
+                            SpotNumber = "C1",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 142,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 5,
+                            SpotNumber = "C2",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 143,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 5,
+                            SpotNumber = "C3",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 144,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 5,
+                            SpotNumber = "C4",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 145,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 5,
+                            SpotNumber = "C5",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 146,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 5,
+                            SpotNumber = "C6",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 147,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 5,
+                            SpotNumber = "C7",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 148,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 5,
+                            SpotNumber = "C8",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 149,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 5,
+                            SpotNumber = "C9",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 150,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 5,
+                            SpotNumber = "C10",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 151,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 6,
+                            SpotNumber = "A1",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 152,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 6,
+                            SpotNumber = "A2",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 153,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 6,
+                            SpotNumber = "A3",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 154,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 6,
+                            SpotNumber = "A4",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 155,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 6,
+                            SpotNumber = "A5",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 156,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 6,
+                            SpotNumber = "A6",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 157,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 6,
+                            SpotNumber = "A7",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 158,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 6,
+                            SpotNumber = "A8",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 159,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 6,
+                            SpotNumber = "A9",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 160,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 6,
+                            SpotNumber = "A10",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 161,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 6,
+                            SpotNumber = "B1",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 162,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 6,
+                            SpotNumber = "B2",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 163,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 6,
+                            SpotNumber = "B3",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 164,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 6,
+                            SpotNumber = "B4",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 165,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 6,
+                            SpotNumber = "B5",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 166,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 6,
+                            SpotNumber = "B6",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 167,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 6,
+                            SpotNumber = "B7",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 168,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 6,
+                            SpotNumber = "B8",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 169,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 6,
+                            SpotNumber = "B9",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 170,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 6,
+                            SpotNumber = "B10",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 171,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 6,
+                            SpotNumber = "C1",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 172,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 6,
+                            SpotNumber = "C2",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 173,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 6,
+                            SpotNumber = "C3",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 174,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 6,
+                            SpotNumber = "C4",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 175,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 6,
+                            SpotNumber = "C5",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 176,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 6,
+                            SpotNumber = "C6",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 177,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 6,
+                            SpotNumber = "C7",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 178,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 6,
+                            SpotNumber = "C8",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 179,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 6,
+                            SpotNumber = "C9",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 180,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 6,
+                            SpotNumber = "C10",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 181,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 7,
+                            SpotNumber = "A1",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 182,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 7,
+                            SpotNumber = "A2",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 183,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 7,
+                            SpotNumber = "A3",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 184,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 7,
+                            SpotNumber = "A4",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 185,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 7,
+                            SpotNumber = "A5",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 186,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 7,
+                            SpotNumber = "A6",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 187,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 7,
+                            SpotNumber = "A7",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 188,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 7,
+                            SpotNumber = "A8",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 189,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 7,
+                            SpotNumber = "A9",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 190,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 7,
+                            SpotNumber = "A10",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 191,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 7,
+                            SpotNumber = "B1",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 192,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 7,
+                            SpotNumber = "B2",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 193,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 7,
+                            SpotNumber = "B3",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 194,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 7,
+                            SpotNumber = "B4",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 195,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 7,
+                            SpotNumber = "B5",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 196,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 7,
+                            SpotNumber = "B6",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 197,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 7,
+                            SpotNumber = "B7",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 198,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 7,
+                            SpotNumber = "B8",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 199,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 7,
+                            SpotNumber = "B9",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 200,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 7,
+                            SpotNumber = "B10",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 201,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 7,
+                            SpotNumber = "C1",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 202,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 7,
+                            SpotNumber = "C2",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 203,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 7,
+                            SpotNumber = "C3",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 204,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 7,
+                            SpotNumber = "C4",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 205,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 7,
+                            SpotNumber = "C5",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 206,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 7,
+                            SpotNumber = "C6",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 207,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 7,
+                            SpotNumber = "C7",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 208,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 7,
+                            SpotNumber = "C8",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 209,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 7,
+                            SpotNumber = "C9",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 210,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 7,
+                            SpotNumber = "C10",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 211,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 8,
+                            SpotNumber = "A1",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 212,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 8,
+                            SpotNumber = "A2",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 213,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 8,
+                            SpotNumber = "A3",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 214,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 8,
+                            SpotNumber = "A4",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 215,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 8,
+                            SpotNumber = "A5",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 216,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 8,
+                            SpotNumber = "A6",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 217,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 8,
+                            SpotNumber = "A7",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 218,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 8,
+                            SpotNumber = "A8",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 219,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 8,
+                            SpotNumber = "A9",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 220,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 8,
+                            SpotNumber = "A10",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 221,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 8,
+                            SpotNumber = "B1",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 222,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 8,
+                            SpotNumber = "B2",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 223,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 8,
+                            SpotNumber = "B3",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 224,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 8,
+                            SpotNumber = "B4",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 225,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 8,
+                            SpotNumber = "B5",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 226,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 8,
+                            SpotNumber = "B6",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 227,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 8,
+                            SpotNumber = "B7",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 228,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 8,
+                            SpotNumber = "B8",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 229,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 8,
+                            SpotNumber = "B9",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 230,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 8,
+                            SpotNumber = "B10",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 231,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 8,
+                            SpotNumber = "C1",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 232,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 8,
+                            SpotNumber = "C2",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 233,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 8,
+                            SpotNumber = "C3",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 234,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 8,
+                            SpotNumber = "C4",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 235,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 8,
+                            SpotNumber = "C5",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 236,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 8,
+                            SpotNumber = "C6",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 237,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 8,
+                            SpotNumber = "C7",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 238,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 8,
+                            SpotNumber = "C8",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 239,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 8,
+                            SpotNumber = "C9",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 240,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 8,
+                            SpotNumber = "C10",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 241,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 9,
+                            SpotNumber = "A1",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 242,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 9,
+                            SpotNumber = "A2",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 243,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 9,
+                            SpotNumber = "A3",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 244,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 9,
+                            SpotNumber = "A4",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 245,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 9,
+                            SpotNumber = "A5",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 246,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 9,
+                            SpotNumber = "A6",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 247,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 9,
+                            SpotNumber = "A7",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 248,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 9,
+                            SpotNumber = "A8",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 249,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 9,
+                            SpotNumber = "A9",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 250,
+                            Location = "Ground Floor",
+                            PricePerHour = 5.0m,
+                            PricePerNight = 50.0m,
+                            PropertyId = 9,
+                            SpotNumber = "A10",
+                            Status = "Available",
+                            Zone = "A"
+                        },
+                        new
+                        {
+                            Id = 251,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 9,
+                            SpotNumber = "B1",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 252,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 9,
+                            SpotNumber = "B2",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 253,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 9,
+                            SpotNumber = "B3",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 254,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 9,
+                            SpotNumber = "B4",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 255,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 9,
+                            SpotNumber = "B5",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 256,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 9,
+                            SpotNumber = "B6",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 257,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 9,
+                            SpotNumber = "B7",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 258,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 9,
+                            SpotNumber = "B8",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 259,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 9,
+                            SpotNumber = "B9",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 260,
+                            Location = "First Floor",
+                            PricePerHour = 10.0m,
+                            PricePerNight = 80.0m,
+                            PropertyId = 9,
+                            SpotNumber = "B10",
+                            Status = "Available",
+                            Zone = "B"
+                        },
+                        new
+                        {
+                            Id = 261,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 9,
+                            SpotNumber = "C1",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 262,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 9,
+                            SpotNumber = "C2",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 263,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 9,
+                            SpotNumber = "C3",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 264,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 9,
+                            SpotNumber = "C4",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 265,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 9,
+                            SpotNumber = "C5",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 266,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 9,
+                            SpotNumber = "C6",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 267,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 9,
+                            SpotNumber = "C7",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 268,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 9,
+                            SpotNumber = "C8",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 269,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 9,
+                            SpotNumber = "C9",
+                            Status = "Available",
+                            Zone = "C"
+                        },
+                        new
+                        {
+                            Id = 270,
+                            Location = "VIP Section",
+                            PricePerHour = 15.0m,
+                            PricePerNight = 120.0m,
+                            PropertyId = 9,
+                            SpotNumber = "C10",
                             Status = "Available",
                             Zone = "C"
                         });
@@ -1143,6 +3123,13 @@ namespace SmartParkingF.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsSold")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ListingType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1162,6 +3149,9 @@ namespace SmartParkingF.API.Migrations
 
                     b.Property<double>("Rating")
                         .HasColumnType("float");
+
+                    b.Property<decimal?>("SalePrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -1184,12 +3174,15 @@ namespace SmartParkingF.API.Migrations
                             Description = "Smart Villa with private parking",
                             HasSmartParking = true,
                             ImageUrl = "https://images.unsplash.com/photo-1506521781263-d8422e82f27a",
+                            IsSold = false,
+                            ListingType = "Both",
                             Location = "Beverly Hills, Cairo",
                             Name = "Luxury Modern Villa",
                             Price = 1250.0m,
                             PricePerHour = 150.0m,
                             PricePerNight = 1250.0m,
                             Rating = 4.9000000000000004,
+                            SalePrice = 2500000.0m,
                             Title = "Luxury Modern Villa",
                             TotalSpots = 90
                         });
@@ -1246,6 +3239,46 @@ namespace SmartParkingF.API.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Reservations");
+                });
+
+            modelBuilder.Entity("SmartParkingF.API.Models.Sale", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BuyerId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("CompletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PropertyId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("SalePrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BuyerId");
+
+                    b.HasIndex("PropertyId");
+
+                    b.ToTable("Sales");
                 });
 
             modelBuilder.Entity("SmartParkingF.API.Models.SystemSettings", b =>
@@ -1319,9 +3352,30 @@ namespace SmartParkingF.API.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("SmartParkingF.API.Models.Sale", b =>
+                {
+                    b.HasOne("SmartParkingF.API.Models.AppUser", "Buyer")
+                        .WithMany()
+                        .HasForeignKey("BuyerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("SmartParkingF.API.Models.Property", "Property")
+                        .WithMany("Sales")
+                        .HasForeignKey("PropertyId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Buyer");
+
+                    b.Navigation("Property");
+                });
+
             modelBuilder.Entity("SmartParkingF.API.Models.Property", b =>
                 {
                     b.Navigation("Reservations");
+
+                    b.Navigation("Sales");
                 });
 #pragma warning restore 612, 618
         }

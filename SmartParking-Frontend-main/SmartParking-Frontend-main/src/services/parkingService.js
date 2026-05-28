@@ -6,6 +6,24 @@ const parkingService = {
         return response.data || [];
     },
 
+    // دالة جلب كل الحجوزات للمستخدم
+    getReservations: async (userId) => {
+        const response = await apiClient.get(`/Reservations/user/${userId}`);
+        return response.data || [];
+    },
+
+    // دالة جلب كل الحجوزات (للادمن)
+    getAllReservations: async () => {
+        const response = await apiClient.get('/Reservations');
+        return response.data || [];
+    },
+
+    // دالة جلب حجز معين بالـ ID
+    getReservationById: async (reservationId) => {
+        const response = await apiClient.get(`/Reservations/${reservationId}`);
+        return response.data;
+    },
+
     confirmReservation: async (reservationData) => {
         const response = await apiClient.post('/Reservations', reservationData);
         return response.data;

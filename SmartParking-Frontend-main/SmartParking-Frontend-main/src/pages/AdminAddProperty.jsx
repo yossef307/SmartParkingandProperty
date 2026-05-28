@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-import { faker } from '@faker-js/faker'; // تأكد من تثبيت المكتبة: npm install @faker-js/faker
+import { faker } from '@faker-js/faker';
 import {
     Building2, MapPin, DollarSign, Image as ImageIcon,
-    ArrowLeft, Plus, CheckCircle2, Loader2, Info, Layout, Sparkles
+    ArrowLeft, Plus, CheckCircle2, Loader2, Info, Layout, Sparkles, Tag
 } from 'lucide-react';
 
 const AdminAddProperty = () => {
@@ -23,15 +23,19 @@ const AdminAddProperty = () => {
         bedrooms: 2,
         bathrooms: 2,
         rating: 5,
-        hasSmartParking: true
+        hasSmartParking: true,
+        // الحقول الجديدة للبيع
+        listingType: 'Rent',  // Rent, Sale, Both
+        salePrice: ''
     });
 
-    // ✨ دالة توليد البيانات السحرية
+    // دالة توليد البيانات السحرية
     const generateMagicData = () => {
         const types = ['Villa', 'Apartment', 'Office', 'Studio'];
+        const listingTypes = ['Rent', 'Sale', 'Both'];
         const selectedType = types[Math.floor(Math.random() * types.length)];
+        const selectedListingType = listingTypes[Math.floor(Math.random() * listingTypes.length)];
 
-        // جلب صورة عشوائية حقيقية للعقارات
         const randomImageId = Math.floor(Math.random() * 1000);
         const randomImageUrl = `https://loremflickr.com/800/600/building,villa,apartment?lock=${randomImageId}`;
 
@@ -45,7 +49,9 @@ const AdminAddProperty = () => {
             imageUrl: randomImageUrl,
             type: selectedType,
             bedrooms: faker.number.int({ min: 1, max: 6 }),
-            bathrooms: faker.number.int({ min: 1, max: 4 })
+            bathrooms: faker.number.int({ min: 1, max: 4 }),
+            listingType: selectedListingType,
+            salePrice: faker.number.int({ min: 500000, max: 5000000 }).toString()
         });
     };
 
@@ -59,7 +65,8 @@ const AdminAddProperty = () => {
                 pricePerHour: parseFloat(formData.pricePerHour),
                 totalSpots: parseInt(formData.totalSpots),
                 bedrooms: parseInt(formData.bedrooms),
-                bathrooms: parseInt(formData.bathrooms)
+                bathrooms: parseInt(formData.bathrooms),
+                salePrice: formData.listingType !== 'Rent' ? parseFloat(formData.salePrice) : null
             };
 
             const response = await axios.post('https://localhost:7144/api/properties', dataToSubmit);
@@ -132,26 +139,8 @@ const AdminAddProperty = () => {
                                 </div>
                             </div>
 
-                            {/* Price Per Day */}
-                            <div className="space-y-2">
-                                <label className="text-sm font-bold text-slate-700 ml-1">Price / Day (EGP)</label>
-                                <div className="relative group">
-                                    <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600" size={18} />
-                                    <input type="number" required value={formData.pricePerHour} onChange={(e) => setFormData({ ...formData, pricePerHour: e.target.value })} className="w-full pl-12 pr-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-blue-600 focus:bg-white outline-none transition-all" placeholder="500" />
-                                </div>
-                            </div>
-
-                            {/* Total Spots */}
-                            <div className="space-y-2">
-                                <label className="text-sm font-bold text-slate-700 ml-1">Total Parking Spots</label>
-                                <div className="relative group">
-                                    <Plus className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600" size={18} />
-                                    <input type="number" required value={formData.totalSpots} onChange={(e) => setFormData({ ...formData, totalSpots: e.target.value })} className="w-full pl-12 pr-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-blue-600 focus:bg-white outline-none transition-all" placeholder="50" />
-                                </div>
-                            </div>
-
                             {/* Property Type */}
-                            <div className="md:col-span-2 space-y-2">
+                            <div className="space-y-2">
                                 <label className="text-sm font-bold text-slate-700 ml-1">Property Type</label>
                                 <div className="relative group">
                                     <Layout className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600" size={18} />
@@ -167,6 +156,92 @@ const AdminAddProperty = () => {
                                         <option value="Studio">Studio</option>
                                     </select>
                                 </div>
+                            </div>
+
+                            {/* Listing Type - نوع العرض */}
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-slate-700 ml-1">Listing Type (نوع العرض)</label>
+                                <div className="relative group">
+                                    <Tag className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600" size={18} />
+                                    <select
+                                        required
+                                        value={formData.listingType}
+                                        onChange={(e) => setFormData({ ...formData, listingType: e.target.value })}
+                                        className="w-full pl-12 pr-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-blue-600 focus:bg-white outline-none transition-all appearance-none font-medium text-slate-700"
+                                    >
+                                        <option value="Rent">For Rent (للإيجار)</option>
+                                        <option value="Sale">For Sale (للبيع)</option>
+                                        <option value="Both">Both (إيجار وبيع)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            {/* Price Per Day - للإيجار */}
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-slate-700 ml-1">
+                                    {formData.listingType === 'Sale' ? 'Price / Day (Optional)' : 'Price / Day (EGP)'}
+                                </label>
+                                <div className="relative group">
+                                    <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600" size={18} />
+                                    <input
+                                        type="number"
+                                        required={formData.listingType !== 'Sale'}
+                                        value={formData.pricePerHour}
+                                        onChange={(e) => setFormData({ ...formData, pricePerHour: e.target.value })}
+                                        className="w-full pl-12 pr-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-blue-600 focus:bg-white outline-none transition-all"
+                                        placeholder="500"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Sale Price - سعر البيع */}
+                            {(formData.listingType === 'Sale' || formData.listingType === 'Both') && (
+                                <div className="space-y-2">
+                                    <label className="text-sm font-bold text-slate-700 ml-1">Sale Price (سعر البيع - EGP)</label>
+                                    <div className="relative group">
+                                        <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 text-green-500 group-focus-within:text-green-600" size={18} />
+                                        <input
+                                            type="number"
+                                            required
+                                            value={formData.salePrice}
+                                            onChange={(e) => setFormData({ ...formData, salePrice: e.target.value })}
+                                            className="w-full pl-12 pr-5 py-3.5 rounded-2xl bg-green-50 border border-green-200 focus:border-green-600 focus:bg-white outline-none transition-all"
+                                            placeholder="1,500,000"
+                                        />
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Total Spots */}
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-slate-700 ml-1">Total Parking Spots</label>
+                                <div className="relative group">
+                                    <Plus className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600" size={18} />
+                                    <input type="number" required value={formData.totalSpots} onChange={(e) => setFormData({ ...formData, totalSpots: e.target.value })} className="w-full pl-12 pr-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-blue-600 focus:bg-white outline-none transition-all" placeholder="50" />
+                                </div>
+                            </div>
+
+                            {/* Bedrooms & Bathrooms */}
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-slate-700 ml-1">Bedrooms</label>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    value={formData.bedrooms}
+                                    onChange={(e) => setFormData({ ...formData, bedrooms: parseInt(e.target.value) })}
+                                    className="w-full px-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-blue-600 focus:bg-white outline-none transition-all"
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-slate-700 ml-1">Bathrooms</label>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    value={formData.bathrooms}
+                                    onChange={(e) => setFormData({ ...formData, bathrooms: parseInt(e.target.value) })}
+                                    className="w-full px-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-blue-600 focus:bg-white outline-none transition-all"
+                                />
                             </div>
 
                             {/* Description */}

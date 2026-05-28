@@ -233,13 +233,14 @@ const Payments = () => {
                                         <TransactionRow
                                             key={txn.transactionId || index}
                                             id={txn.transactionId || `TXN-${String(index + 1).padStart(6, '0')}`}
-                                            title={txn.status === 'Refunded' ? "Refund" : "Stay & Parking Booking"}
+                                            title={txn.status === 'Refunded' ? "Refund" : (txn.type === 'Property Purchase' ? "Property Purchase" : "Stay & Parking Booking")}
                                             sub={txn.propertyName || "RealPark Services"}
                                             date={txn.date}
                                             method={formattedMethod}
                                             status={txn.status}
                                             amount={`$${txn.amount.toFixed(2)}`}
                                             isRefund={txn.status === 'Refunded'}
+                                            isPurchase={txn.type === 'Property Purchase'}
                                             onCancel={() => handleCancelReservation(targetReservationId)}
                                             isCancelling={cancellingId === targetReservationId}
                                         />
@@ -274,8 +275,8 @@ const PaymentStat = ({ label, value, sub, icon, color = "text-slate-800" }) => (
     </div>
 );
 
-const TransactionRow = ({ id, title, sub, date, method, status, amount, isRefund = false, onCancel, isCancelling }) => {
-    const canCancel = status?.toLowerCase() !== 'refunded' && status?.toLowerCase() !== 'cancelled' && status?.toLowerCase() !== 'failed';
+const TransactionRow = ({ id, title, sub, date, method, status, amount, isRefund = false, isPurchase = false, onCancel, isCancelling }) => {
+    const canCancel = status?.toLowerCase() !== 'refunded' && status?.toLowerCase() !== 'cancelled' && status?.toLowerCase() !== 'failed' && !isPurchase;
 
     const currentStatus = status?.toLowerCase();
     let badgeClasses = "bg-green-50 text-green-600 border-green-200";

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { MapPin, Bed, Bath, Square, Car, Heart, Share2, Star, Loader2, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { MapPin, Bed, Bath, Square, Car, Heart, Share2, Star, Loader2, CheckCircle2, AlertTriangle, ShoppingBag, CreditCard } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router-dom';
 import parkingService from '../services/parkingService';
 import axios from 'axios';
@@ -9,9 +9,12 @@ const PropertyDetails = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isBooking, setIsBooking] = useState(false);
     const [reservedSpot, setReservedSpot] = useState(null);
+    const [reservationId, setReservationId] = useState(null);
     const [isLoved, setIsLoved] = useState(false);
     const [selectedZone, setSelectedZone] = useState('A');
     const [copySuccess, setCopySuccess] = useState(false);
+    const [isPurchasing, setIsPurchasing] = useState(false);
+    const [showPurchaseModal, setShowPurchaseModal] = useState(false);
 
     const [bookedRanges, setBookedRanges] = useState([]);
     const [isDateInvalid, setIsDateInvalid] = useState(false);
@@ -94,7 +97,10 @@ const PropertyDetails = () => {
     }, [checkIn, checkOut, bookedRanges]);
 
     // Dynamic pricing from property data
-    const pricePerNight = property?.pricePerNight || 0;
+    const isHourlyPricing = (!property?.pricePerNight || property?.pricePerNight === 0) && property?.pricePerHour > 0;
+    const pricePerNight = property?.pricePerNight && property?.pricePerNight > 0 ? property?.pricePerNight : property?.pricePerHour ?? property?.price ?? 0;
+    const priceLabel = isHourlyPricing ? "/hour" : "/night";
+    const stayLabel = isHourlyPricing ? "hours" : "nights";
     const villaBasePrice = pricePerNight * nights;
     const parkingPrice = isParkingEnabled ? (zonePrices[selectedZone] * nights) : 0;
     const totalPrice = villaBasePrice + parkingPrice + serviceFee;
@@ -114,12 +120,17 @@ const PropertyDetails = () => {
         setIsSubmitting(true);
         try {
             if (!isParkingEnabled) {
-                const spots = await parkingService.getParkingSpots();
-                const availableInZone = spots.find(s =>
-                    s.status?.trim().toLowerCase() === 'available' &&
-                    s.zone?.trim().toUpperCase() === selectedZone.toUpperCase() &&
-                    Number(s.propertyId) === Number(propertyId)
-                );
+                // ✅ جلب الـ spot المتاح مباشرة من الـ API بدل ما نعمل filter في الـ frontend
+                let availableInZone = null;
+                try {
+                    const spotResponse = await axios.get(
+                        `https://localhost:7144/api/ParkingSpots/AvailableInZone?propertyId=${propertyId}&zone=${selectedZone}`
+                    );
+                    availableInZone = spotResponse.data;
+                } catch (spotError) {
+                    // 404 = مفيش spots متاحة
+                    availableInZone = null;
+                }
 
                 if (availableInZone) {
                     const reservationRequest = {
@@ -131,7 +142,8 @@ const PropertyDetails = () => {
                         TotalPrice: Number(zonePrices[selectedZone] * nights)
                     };
 
-                    await parkingService.confirmReservation(reservationRequest);
+                    const reservationRes = await parkingService.confirmReservation(reservationRequest);
+                    setReservationId(reservationRes?.reservationId || null);
                     setReservedSpot(availableInZone);
                     setIsParkingEnabled(true);
                 } else {
@@ -139,9 +151,10 @@ const PropertyDetails = () => {
                 }
             } else {
                 if (reservedSpot) {
-                    await parkingService.cancelReservation(reservedSpot.id);
+                    await parkingService.cancelReservation(reservationId);
                     setIsParkingEnabled(false);
                     setReservedSpot(null);
+                    setReservationId(null);
                 }
             }
         } catch (error) {
@@ -200,6 +213,42 @@ const PropertyDetails = () => {
         setCopySuccess(true);
         setTimeout(() => setCopySuccess(false), 2000);
     };
+
+    // Handle Purchase Property
+    const handlePurchase = async () => {
+        if (!userId) {
+            alert("Please login first to purchase.");
+            navigate('/login');
+            return;
+        }
+
+        setIsPurchasing(true);
+        try {
+            const response = await axios.post('https://localhost:7144/api/Sales', {
+                propertyId: propertyId,
+                buyerId: userId,
+                paymentMethod: 'Card'
+            });
+
+            if (response.data.success) {
+                alert(response.data.message || 'Purchase successful!');
+                setShowPurchaseModal(false);
+                // Refresh property data to show sold status
+                const updatedProperty = await axios.get(`https://localhost:7144/api/Properties/${propertyId}`);
+                setProperty(updatedProperty.data);
+            }
+        } catch (error) {
+            const errorMsg = error.response?.data?.message || 'An error occurred during purchase.';
+            alert(errorMsg);
+        } finally {
+            setIsPurchasing(false);
+        }
+    };
+
+    // Check if property is for sale
+    const isForSale = property?.listingType === 'Sale' || property?.listingType === 'Both';
+    const isForRent = property?.listingType === 'Rent' || property?.listingType === 'Both';
+    const isSold = property?.isSold;
 
     // Loading state
     if (isLoading) {
@@ -260,6 +309,12 @@ const PropertyDetails = () => {
                                     {property?.category || "Premium Plus"}
                                 </span>
                                 <span className="bg-slate-100 text-slate-500 text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">Smart Home</span>
+                                {isForSale && !isSold && (
+                                    <span className="bg-green-100 text-green-600 text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">For Sale</span>
+                                )}
+                                {isSold && (
+                                    <span className="bg-red-100 text-red-600 text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">Sold</span>
+                                )}
                             </div>
                             <h1 className="text-5xl font-black text-slate-900 leading-tight">
                                 {property?.name || "Modern Villa"}
@@ -292,6 +347,47 @@ const PropertyDetails = () => {
                                 {property?.description || "By integrating IoT technologies, we guarantee a designated parking spot that unlocks automatically via the app as you approach the property, eliminating the hassle of searching for parking and keeping your car in a secured area."}
                             </p>
                         </div>
+
+                        {/* Purchase Section - For Sale Properties */}
+                        {isForSale && !isSold && (
+                            <div className="bg-gradient-to-r from-green-50 to-emerald-50/50 p-8 rounded-[35px] border border-green-100 mb-10">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <h3 className="text-xl font-black text-green-900 mb-2 flex items-center gap-2">
+                                            <ShoppingBag className="text-green-600" size={24} /> Property For Sale
+                                        </h3>
+                                        <p className="text-green-700/70 text-sm font-medium mb-3">
+                                            This property is available for purchase. Own your dream home today!
+                                        </p>
+                                        <div className="flex items-baseline gap-2">
+                                            <span className="text-3xl font-black text-green-700">
+                                                ${(property?.salePrice || property?.price || 0).toLocaleString()}
+                                            </span>
+                                            <span className="text-green-600/60 text-sm font-bold">EGP</span>
+                                        </div>
+                                    </div>
+                                    <button
+                                        onClick={() => setShowPurchaseModal(true)}
+                                        className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl font-black text-sm flex items-center gap-2 shadow-lg shadow-green-200 transition-all active:scale-95"
+                                    >
+                                        <CreditCard size={20} />
+                                        Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Sold Notice */}
+                        {isSold && (
+                            <div className="bg-gradient-to-r from-red-50 to-rose-50/50 p-8 rounded-[35px] border border-red-100 mb-10">
+                                <h3 className="text-xl font-black text-red-900 mb-2 flex items-center gap-2">
+                                    <AlertTriangle className="text-red-600" size={24} /> Property Sold
+                                </h3>
+                                <p className="text-red-700/70 text-sm font-medium">
+                                    This property has been sold and is no longer available for purchase.
+                                </p>
+                            </div>
+                        )}
                     </div>
 
                     {/* Right Side: Booking Card */}
@@ -302,7 +398,7 @@ const PropertyDetails = () => {
                                     <p className="text-[10px] font-black text-gray-400 uppercase mb-1 tracking-widest">Base Price</p>
                                     <div className="flex items-baseline gap-1">
                                         <span className="text-4xl font-black text-slate-900">${pricePerNight}</span>
-                                        <span className="text-gray-400 text-sm font-bold">/night</span>
+                                        <span className="text-gray-400 text-sm font-bold">{priceLabel}</span>
                                     </div>
                                 </div>
                                 <div className="bg-green-50 text-green-600 px-4 py-1.5 rounded-full text-[10px] font-black border border-green-100">
@@ -375,7 +471,7 @@ const PropertyDetails = () => {
                             {/* Price Summary */}
                             <div className="space-y-4 mb-8 bg-slate-50/50 p-6 rounded-3xl border border-dashed border-slate-200">
                                 <div className="flex justify-between text-xs font-bold text-slate-500">
-                                    <span>Stay ({nights} nights)</span><span>${villaBasePrice.toLocaleString()}</span>
+                                    <span>Stay ({nights} {stayLabel})</span><span>${villaBasePrice.toLocaleString()}</span>
                                 </div>
                                 {isParkingEnabled && (
                                     <div className="flex justify-between text-xs font-bold text-blue-600">
@@ -409,6 +505,73 @@ const PropertyDetails = () => {
                     </div>
                 </div>
             </main>
+
+            {/* Purchase Confirmation Modal */}
+            {showPurchaseModal && (
+                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+                    <div className="bg-white rounded-[32px] p-8 max-w-md w-full shadow-2xl">
+                        <div className="text-center mb-6">
+                            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <ShoppingBag className="text-green-600" size={32} />
+                            </div>
+                            <h2 className="text-2xl font-black text-slate-900 mb-2">Confirm Purchase</h2>
+                            <p className="text-slate-500 text-sm">You are about to purchase this property</p>
+                        </div>
+
+                        <div className="bg-slate-50 rounded-2xl p-4 mb-6">
+                            <div className="flex items-center gap-4">
+                                <img
+                                    src={property?.imageUrl || "https://images.unsplash.com/photo-1613490493576-7fde63acd811"}
+                                    alt={property?.name}
+                                    className="w-20 h-20 rounded-xl object-cover"
+                                />
+                                <div>
+                                    <h3 className="font-bold text-slate-900">{property?.name}</h3>
+                                    <p className="text-sm text-slate-500 flex items-center gap-1">
+                                        <MapPin size={12} /> {property?.location}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="border-t border-slate-100 pt-4 mb-6">
+                            <div className="flex justify-between items-center">
+                                <span className="text-slate-500 font-medium">Total Price</span>
+                                <span className="text-2xl font-black text-green-600">
+                                    ${(property?.salePrice || property?.price || 0).toLocaleString()}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="flex gap-3">
+                            <button
+                                onClick={() => setShowPurchaseModal(false)}
+                                disabled={isPurchasing}
+                                className="flex-1 py-4 rounded-2xl font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition-all"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={handlePurchase}
+                                disabled={isPurchasing}
+                                className="flex-1 py-4 rounded-2xl font-bold text-white bg-green-600 hover:bg-green-700 transition-all flex items-center justify-center gap-2 disabled:bg-slate-300"
+                            >
+                                {isPurchasing ? (
+                                    <>
+                                        <Loader2 className="animate-spin" size={20} />
+                                        Processing...
+                                    </>
+                                ) : (
+                                    <>
+                                        <CreditCard size={20} />
+                                        Confirm Purchase
+                                    </>
+                                )}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

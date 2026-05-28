@@ -3,6 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Payments.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\pages\\Payments.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\PropertyDetails.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\pages\\PropertyDetails.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\context\\AuthContext.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\context\\AuthContext.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\services\\parkingService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\services\\parkingService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\ParkingReservations.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\pages\\ParkingReservations.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Properties.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\pages\\Properties.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\AdminAddProperty.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\pages\\AdminAddProperty.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\pages\\Home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\components\\Navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\components\\Navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Settings.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\pages\\Settings.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\services\\apiClient.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\services\\apiClient.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -23,14 +63,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\pages\\login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\context\\AuthContext.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\context\\AuthContext.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\services\\parkingService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\services\\parkingService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\services\\userService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartParking-Frontend-main\\src\\services\\userService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -46,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +98,81 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Payments.jsx",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Payments.jsx",
+              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\pages\\Payments.jsx",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Payments.jsx",
+              "RelativeToolTip": "SmartParking-Frontend-main\\src\\pages\\Payments.jsx",
+              "ViewState": "AgIAADMBAAAAAAAAAAAowE0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-28T07:25:43.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PropertyDetails.jsx",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\PropertyDetails.jsx",
+              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\pages\\PropertyDetails.jsx",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\PropertyDetails.jsx",
+              "RelativeToolTip": "SmartParking-Frontend-main\\src\\pages\\PropertyDetails.jsx",
+              "ViewState": "AgIAAC4CAAAAAAAAAAAowEgCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-28T07:12:44.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Properties.jsx",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Properties.jsx",
+              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\pages\\Properties.jsx",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Properties.jsx",
+              "RelativeToolTip": "SmartParking-Frontend-main\\src\\pages\\Properties.jsx",
+              "ViewState": "AgIAACQBAAAAAAAAAAAowD4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-25T21:21:14.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminAddProperty.jsx",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\AdminAddProperty.jsx",
+              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\pages\\AdminAddProperty.jsx",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\AdminAddProperty.jsx",
+              "RelativeToolTip": "SmartParking-Frontend-main\\src\\pages\\AdminAddProperty.jsx",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAowBQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-25T21:20:58.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Home.jsx",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Home.jsx",
+              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\pages\\Home.jsx",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Home.jsx",
+              "RelativeToolTip": "SmartParking-Frontend-main\\src\\pages\\Home.jsx",
+              "ViewState": "AgIAADsAAAAAAAAAAAAowFUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-25T20:42:23.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Settings.jsx",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Settings.jsx",
+              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\pages\\Settings.jsx",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\Settings.jsx",
+              "RelativeToolTip": "SmartParking-Frontend-main\\src\\pages\\Settings.jsx",
+              "ViewState": "AgIAALcAAAAAAAAAAAAowNEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-25T20:28:50.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "signup.jsx",
               "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\signup.jsx",
               "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\pages\\signup.jsx",
@@ -74,12 +180,11 @@
               "RelativeToolTip": "SmartParking-Frontend-main\\src\\pages\\signup.jsx",
               "ViewState": "AgIAADIBAAAAAAAAAAAowEwBAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-05-25T20:14:14.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-25T20:14:14.642Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "main.jsx",
               "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\main.jsx",
               "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\main.jsx",
@@ -87,12 +192,61 @@
               "RelativeToolTip": "SmartParking-Frontend-main\\src\\main.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-05-25T19:56:06.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-25T19:56:06.454Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "parkingService.js",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\services\\parkingService.js",
+              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\services\\parkingService.js",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\services\\parkingService.js",
+              "RelativeToolTip": "SmartParking-Frontend-main\\src\\services\\parkingService.js",
+              "ViewState": "AgIAABYAAAAAAAAAAAAqwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-25T19:54:39.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthContext.jsx",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\context\\AuthContext.jsx",
+              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\context\\AuthContext.jsx",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\context\\AuthContext.jsx",
+              "RelativeToolTip": "SmartParking-Frontend-main\\src\\context\\AuthContext.jsx",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAowKgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-25T19:55:21.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ParkingReservations.jsx",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\ParkingReservations.jsx",
+              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\pages\\ParkingReservations.jsx",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\ParkingReservations.jsx",
+              "RelativeToolTip": "SmartParking-Frontend-main\\src\\pages\\ParkingReservations.jsx",
+              "ViewState": "AgIAAH0BAAAAAAAAAAAowJcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-25T21:55:22.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Navbar.jsx",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\components\\Navbar.jsx",
+              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\components\\Navbar.jsx",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\components\\Navbar.jsx",
+              "RelativeToolTip": "SmartParking-Frontend-main\\src\\components\\Navbar.jsx",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAowG0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-25T20:42:09.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "App.jsx",
               "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\App.jsx",
               "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\App.jsx",
@@ -100,12 +254,11 @@
               "RelativeToolTip": "SmartParking-Frontend-main\\src\\App.jsx",
               "ViewState": "AgIAAK8AAAAAAAAAAAAowMkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-05-25T19:55:55.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-25T19:55:55.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "login.jsx",
               "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\pages\\login.jsx",
               "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\pages\\login.jsx",
@@ -113,38 +266,11 @@
               "RelativeToolTip": "SmartParking-Frontend-main\\src\\pages\\login.jsx",
               "ViewState": "AgIAAI0AAAAAAAAAAAAowKcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-05-25T19:55:42.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-25T19:55:42.124Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthContext.jsx",
-              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\context\\AuthContext.jsx",
-              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\context\\AuthContext.jsx",
-              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\context\\AuthContext.jsx",
-              "RelativeToolTip": "SmartParking-Frontend-main\\src\\context\\AuthContext.jsx",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAowH8AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-05-25T19:55:21.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "parkingService.js",
-              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\services\\parkingService.js",
-              "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\services\\parkingService.js",
-              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\services\\parkingService.js",
-              "RelativeToolTip": "SmartParking-Frontend-main\\src\\services\\parkingService.js",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAowB0AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-05-25T19:54:39.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "userService.js",
               "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\services\\userService.js",
               "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\services\\userService.js",
@@ -152,12 +278,11 @@
               "RelativeToolTip": "SmartParking-Frontend-main\\src\\services\\userService.js",
               "ViewState": "AgIAABYAAAAAAAAAAAAowDAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-05-25T19:54:28.497Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-25T19:54:28.497Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "apiClient.js",
               "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\src\\services\\apiClient.js",
               "RelativeDocumentMoniker": "SmartParking-Frontend-main\\src\\services\\apiClient.js",
@@ -165,12 +290,11 @@
               "RelativeToolTip": "SmartParking-Frontend-main\\src\\services\\apiClient.js",
               "ViewState": "AgIAAEIAAAAAAAAAAAAqwFwAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-05-25T19:54:13.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-25T19:54:13.426Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": ".env",
               "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder (3) (3)\\New folder (3)\\SmartParkingandProperty\\SmartParking-Frontend-main\\SmartParking-Frontend-main\\.env",
               "RelativeDocumentMoniker": "SmartParking-Frontend-main\\.env",
@@ -178,8 +302,7 @@
               "RelativeToolTip": "SmartParking-Frontend-main\\.env",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-25T19:53:52.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-25T19:53:52.132Z"
             }
           ]
         }

@@ -29,7 +29,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[SmartParkingF.API.Models.ParkingSpot, SmartParkingF.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -79,17 +79,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "SmartParkingF.API.Models.ParkingSpot",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "SmartParkingF.API.Controllers.ParkingSpotsController",
@@ -127,6 +117,53 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartParkingF.API.Controllers.ParkingSpotsController",
+    "Method": "GetAvailableInZone",
+    "RelativePath": "api/ParkingSpots/AvailableInZone",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "propertyId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "zone",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartParkingF.API.Controllers.ParkingSpotsController",
+    "Method": "GetByProperty",
+    "RelativePath": "api/ParkingSpots/ByProperty/{propertyId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "propertyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "SmartParkingF.API.Controllers.PaymentsController",
@@ -367,6 +404,84 @@
     "ContainingType": "SmartParkingF.API.Controllers.ReservationsController",
     "Method": "GetUserReservations",
     "RelativePath": "api/Reservations/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartParkingF.API.Controllers.SalesController",
+    "Method": "GetSales",
+    "RelativePath": "api/Sales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartParkingF.API.Controllers.SalesController",
+    "Method": "PurchaseProperty",
+    "RelativePath": "api/Sales",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "saleDto",
+        "Type": "SmartParkingF.API.Controllers.SaleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartParkingF.API.Controllers.SalesController",
+    "Method": "CancelSale",
+    "RelativePath": "api/Sales/{saleId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "saleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartParkingF.API.Controllers.SalesController",
+    "Method": "GetUserPurchases",
+    "RelativePath": "api/Sales/user/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

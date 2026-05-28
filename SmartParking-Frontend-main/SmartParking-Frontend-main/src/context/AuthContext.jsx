@@ -1,7 +1,11 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import axios from 'axios';
 import userService from '../services/userService';
+import apiClient from '../services/apiClient';
 
 const AuthContext = createContext(null);
+
+const API_URL = import.meta.env.VITE_API_URL || 'https://localhost:7144/api';
 
 export const useAuth = () => {
     const context = useContext(AuthContext);
@@ -16,23 +20,39 @@ export const AuthProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-    // تحميل بيانات المستخدم من localStorage عند بدء التطبيق
     useEffect(() => {
-        const loadUser = () => {
+        const loadUser = async () => {
             try {
                 const accessToken = localStorage.getItem('accessToken');
                 const storedUser = localStorage.getItem('user');
+                const refreshToken = localStorage.getItem('refreshToken');
 
-                if (accessToken && storedUser) {
+                if (!accessToken || !storedUser || !refreshToken) {
+                    setIsLoading(false);
+                    return;
+                }
+
+                try {
+                    // ✅ استخدام axios مباشرة (مش apiClient) عشان نتجنب الـ interceptor loop
+                    const response = await axios.post(
+                        `${API_URL}/users/refresh-token`,
+                        { refreshToken },
+                        { headers: { 'Content-Type': 'application/json' } }
+                    );
+
+                    localStorage.setItem('accessToken', response.data.accessToken);
+                    localStorage.setItem('refreshToken', response.data.refreshToken);
+
                     setUser(JSON.parse(storedUser));
                     setIsAuthenticated(true);
+                } catch (apiError) {
+                    // الـ refresh token انتهى → مسح البيانات
+                    console.error('Token validation failed:', apiError.response?.status);
+                    clearAuth();
                 }
             } catch (error) {
                 console.error('Error loading user:', error);
-                localStorage.removeItem('user');
-                localStorage.removeItem('accessToken');
-                localStorage.removeItem('refreshToken');
-                localStorage.removeItem('isLoggedIn');
+                clearAuth();
             } finally {
                 setIsLoading(false);
             }
@@ -41,15 +61,22 @@ export const AuthProvider = ({ children }) => {
         loadUser();
     }, []);
 
+    const clearAuth = () => {
+        localStorage.removeItem('user');
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('refreshToken');
+        localStorage.removeItem('isLoggedIn');
+        setUser(null);
+        setIsAuthenticated(false);
+    };
+
     const login = useCallback(async (credentials) => {
         const response = await userService.login(credentials);
 
-        // حفظ الـ Tokens بأمان
         localStorage.setItem('accessToken', response.accessToken);
         localStorage.setItem('refreshToken', response.refreshToken);
         localStorage.setItem('isLoggedIn', 'true');
 
-        // حفظ بيانات المستخدم (بدون بيانات حساسة)
         const userData = {
             id: response.id,
             fullName: response.fullName,
@@ -91,22 +118,13 @@ export const AuthProvider = ({ children }) => {
         return response;
     }, []);
 
-    // ✅ تم إصلاح الـ logout - الآن يمسح كل الـ localStorage
     const logout = useCallback(async () => {
         try {
             await userService.logout();
         } catch (error) {
             console.error('Logout error:', error);
         } finally {
-            // مسح كل بيانات المستخدم من localStorage
-            localStorage.removeItem('accessToken');
-            localStorage.removeItem('refreshToken');
-            localStorage.removeItem('user');
-            localStorage.removeItem('isLoggedIn');
-
-            // تحديث الـ State
-            setUser(null);
-            setIsAuthenticated(false);
+            clearAuth();
         }
     }, []);
 
