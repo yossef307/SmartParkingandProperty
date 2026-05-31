@@ -1,8 +1,15 @@
 import apiClient from './apiClient';
 
 const parkingService = {
+    // جيب كل الـ spots بدون فلترة (للأدمن فقط)
     getParkingSpots: async () => {
         const response = await apiClient.get('/ParkingSpots');
+        return response.data || [];
+    },
+
+    // ✅ جيب spots property معينة بس — بيحل مشكلة تكرار الأرقام
+    getParkingSpotsByProperty: async (propertyId) => {
+        const response = await apiClient.get(`/ParkingSpots/ByProperty/${propertyId}`);
         return response.data || [];
     },
 

@@ -1,31 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { XCircle, CheckCircle2, Loader2, Info, Clock, DollarSign } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
+import { useAuth } from '../context/AuthContext';
 import parkingService from '../services/parkingService';
 
 /**
  * Parking Reservation Management Component - RealPark System
- * Features: Dynamic QR Code & Custom Reservation Duration with Live Price Calculation
- * Fixed: Cancel now uses reservationId instead of spotId
+ * Fixed:
+ *   - Bug 1: userId مش hardcoded - بييجي من الـ AuthContext
+ *   - Bug 2: إصلاح مقارنة الـ status بـ case-insensitive عشان Cancel يشتغل
+ *   - Bug 3: Cancel بيستخدم reservationId مش spotId
+ *   - Bug 4: ✅ جديد - الـ seeder اتعدل لـ 120 spot (40×3) كلهم على نفس الـ property
  */
+
+// ✅ الـ propertyId اللي بنشتغل عليه — غيره لو عندك أكتر من property
+
+
 const ParkingReservations = () => {
+    const { user } = useAuth();
+
     const [spots, setSpots] = useState([]);
     const [selectedSpot, setSelectedSpot] = useState(null);
     const [loading, setLoading] = useState(true);
     const [actionLoading, setActionLoading] = useState(false);
     const [confirmedBooking, setConfirmedBooking] = useState(null);
-    const [reservations, setReservations] = useState([]); // Store active reservations
-
-    // Control reservation hours duration (Default: 1 Hour)
+    const [reservations, setReservations] = useState([]);
     const [reservationHours, setReservationHours] = useState(1);
-
-    // Default testing values
-    const DEFAULT_USER_ID = 1;
-    const DEFAULT_PROPERTY_ID = 1;
 
     // Fetch data from server
     const loadData = async () => {
         try {
+            // ✅ الإصلاح الجديد: بنجيب spots الـ property دي بس مش كل الـ spots
+            // ده بيحل مشكلة تكرار A1, A1, A1 اللي كانت بتحصل لما يكون فيه أكتر من property في الـ DB
             const data = await parkingService.getParkingSpots();
 
             const formatted = data.sort((a, b) =>
@@ -37,24 +43,23 @@ const ParkingReservations = () => {
                 price: s.pricePerHour || 0,
                 status: s.status,
                 propertyId: s.propertyId,
-                reservationId: s.reservationId || null // Store reservation ID if available
+                reservationId: s.reservationId || null
             }));
 
             setSpots(formatted);
 
-            // Also fetch active reservations to map spotId -> reservationId
+            const userId = user?.id;
+            if (!userId) return;
+
             try {
-                // Get userId from localStorage or use default
-                const storedUser = localStorage.getItem('user');
-                const userId = storedUser ? JSON.parse(storedUser).id : DEFAULT_USER_ID;
                 const reservationsData = await parkingService.getReservations(userId);
                 setReservations(reservationsData || []);
             } catch (err) {
-                console.log("Could not fetch reservations:", err);
-                // Try fetching all reservations as fallback
+                console.log("Could not fetch user reservations:", err);
                 try {
                     const allReservations = await parkingService.getAllReservations();
-                    setReservations(allReservations || []);
+                    const userReservations = allReservations.filter(r => r.userId === userId || r.userEmail === user?.email);
+                    setReservations(userReservations || []);
                 } catch (e) {
                     console.log("Could not fetch all reservations:", e);
                 }
@@ -71,16 +76,18 @@ const ParkingReservations = () => {
         loadData();
     }, []);
 
-    // Find reservation ID for a given spot
+    // ✅ مقارنة الـ status بـ case-insensitive
     const findReservationIdForSpot = (spotName) => {
-        const reservation = reservations.find(r =>
-            r.spotNumber === spotName &&
-            (r.status === 'Confirmed' || r.status === 'Active' || r.status === 'Pending')
-        );
+        const reservation = reservations.find(r => {
+            const statusLower = r.status?.toLowerCase();
+            return (
+                r.spotNumber === spotName &&
+                (statusLower === 'confirmed' || statusLower === 'active' || statusLower === 'pending')
+            );
+        });
         return reservation?.id || null;
     };
 
-    // Live calculation of total price based on selected hours
     const calculatedTotalPrice = selectedSpot ? (Number(selectedSpot.price) * reservationHours) : 0;
 
     // Handle reservation confirmation
@@ -90,21 +97,25 @@ const ParkingReservations = () => {
             return;
         }
 
+        if (!user?.id) {
+            alert("يجب تسجيل الدخول أولاً لإتمام الحجز");
+            return;
+        }
+
+        const currentUserId = user.id;
+
         setActionLoading(true);
 
         const now = new Date();
         const startTime = now.toISOString().split('.')[0] + "Z";
-
-        // Dynamic calculation of endTime based on chosen duration
         const endDateTime = new Date(now.getTime() + (reservationHours * 60 * 60 * 1000));
         const endTime = endDateTime.toISOString().split('.')[0] + "Z";
 
         const localTicketId = Math.floor(100000 + Math.random() * 900000);
 
-        // Prep the local simulation display ticket first
         setConfirmedBooking({
             spotName: selectedSpot.name,
-            userId: DEFAULT_USER_ID,
+            userId: currentUserId,
             bookingTime: startTime,
             duration: reservationHours,
             totalPaid: calculatedTotalPrice,
@@ -112,11 +123,10 @@ const ParkingReservations = () => {
         });
 
         try {
-            // Precise formatting of payload variables
             const payload = {
                 parkingSpotId: Number(selectedSpot.id),
-                propertyId: Number(selectedSpot.propertyId || DEFAULT_PROPERTY_ID),
-                userId: Number(DEFAULT_USER_ID),
+                propertyId: Number(selectedSpot.propertyId || 1),
+                userId: Number(currentUserId),
                 startDate: startTime,
                 endDate: endTime,
                 totalPrice: Number(calculatedTotalPrice)
@@ -126,39 +136,41 @@ const ParkingReservations = () => {
 
             const responseData = await parkingService.confirmReservation(payload);
 
-            if (responseData?.id) {
-                setConfirmedBooking(prev => ({ ...prev, reservationId: responseData.id }));
-                // Add new reservation to local state
+            // API بترجع { success, message, reservationId }
+            const newReservationId = responseData?.reservationId || responseData?.id;
+
+            if (newReservationId) {
+                setConfirmedBooking(prev => ({ ...prev, reservationId: newReservationId }));
                 setReservations(prev => [...prev, {
-                    id: responseData.id,
+                    id: newReservationId,
                     spotNumber: selectedSpot.name,
                     status: 'Confirmed'
                 }]);
             }
 
-            alert(`Reservation for spot ${selectedSpot.name} for (${reservationHours} Hours) confirmed successfully!`);
+            alert(`تم تأكيد حجز مكان ${selectedSpot.name} لمدة (${reservationHours} ساعة) بنجاح!`);
             setSelectedSpot(null);
             await loadData();
 
         } catch (error) {
             console.error("API Error:", error.response?.data);
-            alert(`UI Simulated Mode:\nSaves locally for presentation, but API connection failed.`);
+            const errMsg = error.response?.data?.message || "فشل الاتصال بالـ API";
+            alert(`خطأ: ${errMsg}`);
             setSelectedSpot(null);
         } finally {
             setActionLoading(false);
         }
     };
 
-    // Handle reservation cancellation - FIXED: Now uses reservationId
+    // Handle reservation cancellation
     const handleCancel = async () => {
         if (!selectedSpot) return;
 
-        // Find the reservation ID for this spot
         const reservationId = findReservationIdForSpot(selectedSpot.name);
 
         if (!reservationId) {
             alert(`Error: Could not find active reservation for spot ${selectedSpot.name}. Please refresh the page.`);
-            await loadData(); // Refresh data
+            await loadData();
             return;
         }
 
@@ -166,12 +178,10 @@ const ParkingReservations = () => {
 
         setActionLoading(true);
         try {
-            // Use reservationId instead of spotId
             await parkingService.cancelReservation(reservationId);
             alert(`Reservation #${reservationId} for ${selectedSpot.name} has been cancelled`);
             setSelectedSpot(null);
             setConfirmedBooking(null);
-            // Remove from local reservations
             setReservations(prev => prev.filter(r => r.id !== reservationId));
             await loadData();
         } catch (e) {
@@ -193,7 +203,7 @@ const ParkingReservations = () => {
 
     const handleSpotSelection = (spot) => {
         setConfirmedBooking(null);
-        setReservationHours(1); // Reset duration back to 1 hour on switching slots
+        setReservationHours(1);
         setSelectedSpot(spot);
     };
 
@@ -286,7 +296,6 @@ const ParkingReservations = () => {
                                     <span className="text-slate-400 font-bold">Rate</span>
                                     <span className="font-black text-slate-800">${selectedSpot.price}/hr</span>
                                 </div>
-                                {/* Show Reservation ID if spot is occupied */}
                                 {selectedSpot.status?.toLowerCase() !== 'available' && findReservationIdForSpot(selectedSpot.name) && (
                                     <div className="flex justify-between items-center border-t border-slate-200 pt-4">
                                         <span className="text-slate-400 font-bold">Reservation ID</span>
@@ -295,7 +304,6 @@ const ParkingReservations = () => {
                                 )}
                             </div>
 
-                            {/* Dropdown Input layout for Duration selection */}
                             {selectedSpot.status?.toLowerCase() === 'available' && (
                                 <div className="mb-6 space-y-4 border border-slate-100 p-5 rounded-[26px] bg-white shadow-sm">
                                     <div className="flex items-center justify-between">

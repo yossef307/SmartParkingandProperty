@@ -148,8 +148,9 @@ using (var scope = app.Services.CreateScope())
         }
 
         var firstProperty = context.Properties.FirstOrDefault();
-        if (firstProperty != null && context.ParkingSpots.Count() < 90)
+        if (firstProperty != null && context.ParkingSpots.Count() < 120)
         {
+            // مسح كل الـ spots القديمة وإعادة الإنشاء من الصفر
             var oldSpots = context.ParkingSpots.ToList();
             if (oldSpots.Any())
             {
@@ -159,17 +160,21 @@ using (var scope = app.Services.CreateScope())
 
             var newSpots = new List<ParkingSpot>();
 
-            for (int i = 1; i <= 30; i++)
-                newSpots.Add(new ParkingSpot { SpotNumber = "A" + i, Zone = "A", PricePerHour = 5, PricePerNight = 50, Status = i <= 5 ? "Occupied" : "Available", Location = "Ground Floor", PropertyId = firstProperty.Id });
+            // Zone A — 40 جراج — Ground Floor — $5/hr
+            for (int i = 1; i <= 40; i++)
+                newSpots.Add(new ParkingSpot { SpotNumber = "A" + i, Zone = "A", PricePerHour = 5, PricePerNight = 50, Status = "Available", Location = "Ground Floor", PropertyId = firstProperty.Id });
 
-            for (int i = 1; i <= 30; i++)
+            // Zone B — 40 جراج — First Floor — $10/hr
+            for (int i = 1; i <= 40; i++)
                 newSpots.Add(new ParkingSpot { SpotNumber = "B" + i, Zone = "B", PricePerHour = 10, PricePerNight = 80, Status = "Available", Location = "First Floor", PropertyId = firstProperty.Id });
 
-            for (int i = 1; i <= 30; i++)
+            // Zone C — 40 جراج — VIP Section — $15/hr
+            for (int i = 1; i <= 40; i++)
                 newSpots.Add(new ParkingSpot { SpotNumber = "C" + i, Zone = "C", PricePerHour = 15, PricePerNight = 120, Status = "Available", Location = "VIP Section", PropertyId = firstProperty.Id });
 
             context.ParkingSpots.AddRange(newSpots);
             context.SaveChanges();
+            Log.Information("Seeded 120 parking spots (40 per zone) successfully");
         }
 
         if (!context.Reservations.Any())

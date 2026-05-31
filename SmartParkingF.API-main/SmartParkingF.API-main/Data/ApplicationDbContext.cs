@@ -84,11 +84,11 @@ namespace SmartParkingF.API.Data
                 }
             );
 
-            // ✅ توليد 30 spot لكل property من 1 لـ 9
+            // ✅ توليد 30 spot لكل property من 1 لـ 24
             var allSpots = new List<ParkingSpot>();
             int currentId = 1;
 
-            for (int propId = 1; propId <= 9; propId++)
+            for (int propId = 1; propId <= 24; propId++)
             {
                 // Zone A: 10 Spots
                 for (int i = 1; i <= 10; i++)
